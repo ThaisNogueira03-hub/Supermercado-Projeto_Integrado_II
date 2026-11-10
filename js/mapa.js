@@ -201,7 +201,7 @@ async function carregarSvgMapa(produto) {
 
   const resposta =
     await fetch(
-      "./assets/mapa/supermercado-Anhanvera.svg"
+      "./assets/mapa/supermercado-anhanvera.svg"
     );
 
 
