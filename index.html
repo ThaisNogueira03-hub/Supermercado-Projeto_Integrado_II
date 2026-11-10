@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Supermercado Anhanvera</title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+</head>
+
+
+<body class="pagina-home-totem">
+
+  <!-- =====================================================
+       CABEÇALHO DO TOTEM
+  ====================================================== -->
+
+  <header class="cabecalho">
+
+    <div class="cabecalho-conteudo">
+
+      <!-- MARCA -->
+
+      <div class="marca-anhanvera">
+
+        <svg
+          class="marca-carrinho"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="9" cy="20" r="1"></circle>
+          <circle cx="19" cy="20" r="1"></circle>
+
+          <path
+            d="M3 4h2l2.6 10.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6"
+          ></path>
+        </svg>
+
+
+        <div class="marca-texto">
+
+          <span>
+            Supermercado
+          </span>
+
+          <strong>
+            Anhanvera
+          </strong>
+
+          <i></i>
+
+        </div>
+
+      </div>
+
+
+      <!-- UTILIDADES -->
+
+      <div class="cabecalho-utilidades">
+
+        <!-- DATA -->
+
+        <div class="info-tempo info-data">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="16"
+              rx="2"
+            ></rect>
+
+            <line
+              x1="16"
+              y1="3"
+              x2="16"
+              y2="7"
+            ></line>
+
+            <line
+              x1="8"
+              y1="3"
+              x2="8"
+              y2="7"
+            ></line>
+
+            <line
+              x1="3"
+              y1="11"
+              x2="21"
+              y2="11"
+            ></line>
+          </svg>
+
+          <span id="dataAtual">
+            Carregando...
+          </span>
+
+        </div>
+
+
+        <span
+          class="divisor-topo"
+          aria-hidden="true"
+        ></span>
+
+
+        <!-- HORA -->
+
+        <div class="info-tempo">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="9"
+            ></circle>
+
+            <path
+              d="M12 7v5l3 2"
+            ></path>
+          </svg>
+
+          <strong id="horaAtual">
+            --:--
+          </strong>
+
+        </div>
+
+
+        <span
+          class="divisor-topo"
+          aria-hidden="true"
+        ></span>
+
+
+        <!--
+          acessibilidade.js vai inserir
+          os controles aqui.
+        -->
+
+        <div
+          class="acessibilidade-slot"
+          aria-label="Recursos de acessibilidade"
+        ></div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       CONTEÚDO
+  ====================================================== -->
+
+  <main class="home-totem">
+
+
+    <!-- TÍTULO -->
+
+    <section class="home-intro">
+
+      <div
+        class="detalhe-laranja"
+        aria-hidden="true"
+      ></div>
+
+      <div>
+
+        <h1>
+          Encontre o que você precisa
+        </h1>
+
+        <p>
+          Pesquise um produto ou selecione um setor no mapa
+          para ver os itens disponíveis.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         BUSCA
+    ==================================================== -->
+
+    <section
+      class="painel-busca-home"
+      aria-label="Pesquisa de produtos"
+    >
+
+      <!-- CATEGORIA -->
+
+      <div class="home-categoria">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <path d="m12 2 9 5-9 5-9-5 9-5"></path>
+          <path d="m3 12 9 5 9-5"></path>
+          <path d="m3 17 9 5 9-5"></path>
+        </svg>
+
+        <select
+          id="categoria"
+          aria-label="Categoria"
+        >
+          <option value="">
+            Todas as categorias
+          </option>
+        </select>
+
+      </div>
+
+
+      <span
+        class="divisor-busca"
+        aria-hidden="true"
+      ></span>
+
+
+      <!-- CAMPO -->
+
+      <div class="campo-busca-wrapper home-campo-busca">
+
+        <svg
+          class="icone-lupa-campo"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <circle
+            cx="11"
+            cy="11"
+            r="8"
+          ></circle>
+
+          <path
+            d="m21 21-4.3-4.3"
+          ></path>
+        </svg>
+
+
+        <input
+          type="text"
+          id="campoBusca"
+          placeholder="Digite o nome do produto (ex.: arroz, leite, café)..."
+          autocomplete="off"
+          aria-label="Pesquisar produto"
+        >
+
+
+        <div
+          id="sugestoesBusca"
+          class="sugestoes-busca"
+        ></div>
+
+      </div>
+
+
+      <!-- MICROFONE -->
+
+      <button
+        type="button"
+        id="botaoVozBusca"
+        class="botao-voz-busca"
+        aria-label="Pesquisar por voz"
+        title="Pesquisar por voz"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path
+            d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"
+          ></path>
+
+          <path
+            d="M19 10v2a7 7 0 0 1-14 0v-2"
+          ></path>
+
+          <line
+            x1="12"
+            y1="19"
+            x2="12"
+            y2="22"
+          ></line>
+        </svg>
+
+      </button>
+
+
+      <!-- BOTÃO PESQUISA -->
+
+      <button
+        type="button"
+        id="botaoPesquisar"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <circle
+            cx="11"
+            cy="11"
+            r="8"
+          ></circle>
+
+          <path
+            d="m21 21-4.3-4.3"
+          ></path>
+        </svg>
+
+        Pesquisar
+
+      </button>
+
+    </section>
+
+
+    <!-- ===================================================
+         MAPA + TOTEM
+    ==================================================== -->
+
+    <section class="home-grid-principal">
+
+
+      <!-- MAPA -->
+
+      <div class="painel-mapa-home">
+
+        <div class="painel-titulo">
+
+          <div class="painel-titulo-icone laranja">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+              ></path>
+            </svg>
+
+          </div>
+
+
+          <h2>
+            Mapa do Supermercado
+          </h2>
+
+        </div>
+
+
+        <!--
+          ESTE É O MESMO MAPA QUE JÁ TEMOS.
+          app.js continua carregando o SVG atual aqui.
+        -->
+
+        <div class="mapa-exploracao-wrapper">
+
+          <div id="mapaExploracao">
+
+            <div class="mensagem">
+              Carregando mapa...
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- produtos ao clicar no setor -->
+
+        <div id="produtosSetor"></div>
+
+      </div>
+
+
+      <!-- COLUNA DIREITA -->
+
+      <aside class="home-coluna-direita">
+
+
+        <!-- TOTEM -->
+
+        <section class="painel-totem-home">
+
+          <div class="painel-totem-titulo">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+              ></path>
+            </svg>
+
+            <div>
+
+              <h2>
+                Em qual totem você está?
+              </h2>
+
+              <p>
+                Selecione o totem para definir
+                seu ponto de partida na rota.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="grade-totens">
+
+            <button
+              type="button"
+              class="botao-totem-home"
+              data-totem="1"
+            >
+              T1
+            </button>
+
+
+            <button
+              type="button"
+              class="botao-totem-home"
+              data-totem="2"
+            >
+              T2
+            </button>
+
+
+            <button
+              type="button"
+              class="botao-totem-home"
+              data-totem="3"
+            >
+              T3
+            </button>
+
+
+            <button
+              type="button"
+              class="botao-totem-home"
+              data-totem="4"
+            >
+              T4
+            </button>
+
+
+            <button
+              type="button"
+              class="botao-totem-home"
+              data-totem="5"
+            >
+              T5
+            </button>
+
+          </div>
+
+
+          <div
+            id="totemSelecionadoHome"
+            class="totem-confirmacao"
+            aria-live="polite"
+          >
+
+            <div class="totem-check">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Selecione seu totem
+              </strong>
+
+              <span>
+                para iniciar uma rota.
+              </span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- AJUDA -->
+
+        <section class="painel-ajuda-home">
+
+          <div class="icone-ajuda-home">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              ></circle>
+
+              <path
+                d="m21 21-4.3-4.3"
+              ></path>
+            </svg>
+
+          </div>
+
+          <div>
+
+            <strong>
+              Pesquise um produto
+            </strong>
+
+            <p>
+              Use a busca acima ou toque em um setor
+              do mapa para ver os itens disponíveis.
+            </p>
+
+          </div>
+
+        </section>
+
+      </aside>
+
+    </section>
+
+
+    <!-- ===================================================
+         RESULTADOS
+    ==================================================== -->
+
+    <section class="home-resultados">
+
+      <div id="resultados">
+
+        <div class="mensagem-inicial">
+
+          Pesquise um produto ou selecione
+          um setor no mapa para começar.
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    Supermercado Anhanvera 
+  </footer>
+
+
+  <script
+    src="js/app.js"
+    defer
+  ></script>
+
+  <script
+    src="js/home.js"
+    defer
+  ></script>
+
+  <script
+    src="js/inatividade.js"
+    defer
+  ></script>
+
+  <script
+    src="js/acessibilidade.js"
+    defer
+  ></script>
+
+  <script
+    src="js/assistente-voz.js"
+    defer
+  ></script>
+
+</body>
+
+</html>

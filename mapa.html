@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Mapa | Supermercado Anhanvera
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+
+  <!-- MAPA / ROTA -->
+
+  <script
+    src="js/mapa.js"
+    defer
+  ></script>
+
+
+  <!-- DATA E HORA -->
+
+  <script
+    src="js/home.js"
+    defer
+  ></script>
+
+
+  <!-- INATIVIDADE -->
+
+  <script
+    src="js/inatividade.js"
+    defer
+  ></script>
+
+
+  <!-- ACESSIBILIDADE -->
+
+  <script
+    src="js/acessibilidade.js"
+    defer
+  ></script>
+
+
+  <!-- ASSISTENTE POR VOZ -->
+
+  <script
+    src="js/assistente-voz.js"
+    defer
+  ></script>
+
+</head>
+
+
+<body class="pagina-interna-totem pagina-mapa-totem">
+
+
+  <!-- =====================================================
+       CABEÇALHO
+  ====================================================== -->
+
+  <header class="cabecalho">
+
+    <div class="cabecalho-conteudo">
+
+
+      <!-- LOGO -->
+
+      <a
+        href="index.html"
+        class="marca-anhanvera"
+        style="text-decoration: none;"
+      >
+
+        <svg
+          class="marca-carrinho"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+
+          <circle
+            cx="9"
+            cy="20"
+            r="1"
+          ></circle>
+
+          <circle
+            cx="19"
+            cy="20"
+            r="1"
+          ></circle>
+
+          <path
+            d="M3 4h2l2.6 10.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6"
+          ></path>
+
+        </svg>
+
+
+        <div class="marca-texto">
+
+          <span>
+            Supermercado
+          </span>
+
+          <strong>
+            Anhanvera
+          </strong>
+
+          <i></i>
+
+        </div>
+
+      </a>
+
+
+      <!-- UTILIDADES -->
+
+      <div class="cabecalho-utilidades">
+
+
+        <!-- DATA -->
+
+        <div class="info-tempo info-data">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="16"
+              rx="2"
+            ></rect>
+
+            <line
+              x1="16"
+              y1="3"
+              x2="16"
+              y2="7"
+            ></line>
+
+            <line
+              x1="8"
+              y1="3"
+              x2="8"
+              y2="7"
+            ></line>
+
+            <line
+              x1="3"
+              y1="11"
+              x2="21"
+              y2="11"
+            ></line>
+
+          </svg>
+
+          <span id="dataAtual">
+            Carregando...
+          </span>
+
+        </div>
+
+
+        <span
+          class="divisor-topo"
+          aria-hidden="true"
+        ></span>
+
+
+        <!-- HORA -->
+
+        <div class="info-tempo">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+
+            <circle
+              cx="12"
+              cy="12"
+              r="9"
+            ></circle>
+
+            <path
+              d="M12 7v5l3 2"
+            ></path>
+
+          </svg>
+
+          <strong id="horaAtual">
+            --:--
+          </strong>
+
+        </div>
+
+
+        <span
+          class="divisor-topo"
+          aria-hidden="true"
+        ></span>
+
+
+        <!-- ACESSIBILIDADE -->
+
+        <div
+          class="acessibilidade-slot"
+          aria-label="Recursos de acessibilidade"
+        ></div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       CONTEÚDO
+  ====================================================== -->
+
+  <main>
+
+
+    <!-- VOLTAR -->
+
+    <a
+      href="javascript:history.back()"
+      class="voltar"
+    >
+      ← Voltar
+    </a>
+
+
+    <!-- INFORMAÇÕES DO PRODUTO -->
+
+    <section id="informacoesMapa">
+
+      <div class="mensagem">
+        Carregando localização...
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         MAPA + ROTA
+    ==================================================== -->
+
+    <section class="mapa-pagina">
+
+
+      <div class="mapa-pagina-cabecalho">
+
+        <div>
+
+          <span class="mapa-etiqueta">
+            Localização no supermercado
+          </span>
+
+          <h2>
+            Rota até o produto
+          </h2>
+
+          <p>
+            Siga o caminho destacado no mapa.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="rota-layout">
+
+
+        <!-- ===============================================
+             MAPA
+        ================================================ -->
+
+        <div class="rota-mapa-coluna">
+
+          <div class="mapa-produto-wrapper">
+
+            <div id="mapaProduto">
+
+              <div class="mensagem">
+                Carregando mapa...
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ===============================================
+             PAINEL LATERAL
+        ================================================ -->
+
+        <aside class="rota-painel">
+
+
+          <!-- TOTEM -->
+
+          <div class="escolha-totem">
+
+            <span class="mapa-etiqueta">
+              Ponto de partida
+            </span>
+
+            <h3>
+              Totem selecionado
+            </h3>
+
+            <p>
+              O totem escolhido na tela inicial já está selecionado.
+              Altere somente se necessário.
+            </p>
+
+
+            <div class="botoes-totem">
+
+              <button
+                type="button"
+                class="botao-totem"
+                data-totem="1"
+              >
+                T1
+              </button>
+
+              <button
+                type="button"
+                class="botao-totem"
+                data-totem="2"
+              >
+                T2
+              </button>
+
+              <button
+                type="button"
+                class="botao-totem"
+                data-totem="3"
+              >
+                T3
+              </button>
+
+              <button
+                type="button"
+                class="botao-totem"
+                data-totem="4"
+              >
+                T4
+              </button>
+
+              <button
+                type="button"
+                class="botao-totem"
+                data-totem="5"
+              >
+                T5
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- INSTRUÇÕES -->
+
+          <div class="rota-instrucoes-area">
+
+            <div
+              id="instrucaoRota"
+              class="instrucao-rota"
+            ></div>
+
+          </div>
+
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       RODAPÉ
+  ====================================================== -->
+
+  <footer>
+
+    Supermercado Anhanvera 
+
+  </footer>
+
+
+</body>
+
+</html>

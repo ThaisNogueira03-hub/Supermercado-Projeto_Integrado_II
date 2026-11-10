@@ -1,0 +1,7065 @@
+
+:root {
+  --verde: #166534;
+  --verde-claro: #16a34a;
+  --verde-hover: #15803d;
+  --verde-suave: #f0fdf4;
+  --verde-borda: #bbf7d0;
+
+  --fundo: #f5f7f6;
+  --superficie: #ffffff;
+  --texto: #1f2937;
+  --texto-forte: #111827;
+  --texto-suave: #6b7280;
+  --borda: #e5e7eb;
+
+  --raio: 12px;
+  --escala-interface: 1;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+main,
+footer {
+  zoom: var(--escala-interface);
+}
+
+
+.cabecalho {
+  position: relative;
+  min-height: 86px;
+  background: var(--superficie);
+  border-bottom: 1px solid var(--borda);
+}
+
+.cabecalho-conteudo {
+  max-width: 1100px;
+  min-height: 86px;
+  margin: auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--verde);
+}
+
+.logo svg {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.logo div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo strong {
+  font-size: 13px;
+  font-weight: normal;
+  color: #4b5563;
+}
+
+.logo span {
+  margin-top: 3px;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--verde);
+}
+
+
+/* =========================
+   ACESSIBILIDADE NO TOPO
+========================= */
+
+.barra-acessibilidade {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 6px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.botao-acessibilidade,
+.percentual-fonte {
+  min-width: 42px;
+  height: 38px;
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--verde);
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: var(--verde);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.percentual-fonte {
+  min-width: 62px;
+  font-size: 13px;
+}
+
+.botao-acessibilidade:hover,
+.percentual-fonte:hover {
+  background: var(--verde-suave);
+  transform: translateY(-1px);
+}
+
+.botao-acessibilidade.ativo {
+  background: var(--verde);
+  color: #ffffff;
+}
+
+.botao-tema svg {
+  width: 19px;
+  height: 19px;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+  max-width: 1100px;
+  min-height: calc(100vh - 150px);
+  margin: auto;
+  padding: 60px 24px;
+}
+
+.inicio {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.inicio h1 {
+  margin: 0 0 10px;
+  font-size: 38px;
+  color: var(--texto-forte);
+}
+
+.inicio p {
+  margin: 0 0 32px;
+  font-size: 17px;
+  color: var(--texto-suave);
+}
+
+
+/* =========================
+   FILTROS
+========================= */
+
+.filtros {
+  max-width: 760px;
+  margin: auto;
+}
+
+.grupo-campo {
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.grupo-campo label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+}
+
+#categoria {
+  width: 100%;
+  padding: 14px 16px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: var(--texto-forte);
+
+  font-size: 15px;
+  outline: none;
+}
+
+#categoria:focus {
+  border-color: var(--verde-claro);
+}
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+.area-busca {
+  display: flex;
+  gap: 10px;
+}
+
+.campo-busca-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+#campoBusca {
+  width: 100%;
+  min-width: 0;
+  padding: 16px 18px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: var(--texto-forte);
+
+  font-size: 16px;
+  outline: none;
+}
+
+#campoBusca:focus {
+  border-color: var(--verde-claro);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.08);
+}
+
+#botaoPesquisar {
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: var(--verde-claro);
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#botaoPesquisar:hover {
+  background: var(--verde-hover);
+}
+
+#botaoPesquisar svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* =========================
+   AUTOCOMPLETE
+========================= */
+
+.sugestoes-busca {
+  display: none;
+
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+
+  z-index: 9999;
+
+  max-height: 340px;
+  overflow-y: auto;
+
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+.sugestoes-busca.visivel {
+  display: block;
+}
+
+.item-sugestao {
+  width: 100%;
+  padding: 12px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+
+  background: #ffffff;
+  color: var(--texto);
+
+  text-align: left;
+  cursor: pointer;
+}
+
+.item-sugestao:last-child {
+  border-bottom: 0;
+}
+
+.item-sugestao:hover {
+  background: var(--verde-suave);
+}
+
+.sugestao-dados {
+  min-width: 0;
+}
+
+.sugestao-dados strong {
+  display: block;
+  color: var(--texto-forte);
+  font-size: 14px;
+}
+
+.sugestao-dados span {
+  display: block;
+  margin-top: 3px;
+  color: var(--texto-suave);
+  font-size: 12px;
+}
+
+.sugestao-preco {
+  flex-shrink: 0;
+  color: var(--verde);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sugestao-vazia {
+  padding: 14px;
+  color: var(--texto-suave);
+  font-size: 13px;
+}
+
+
+/* =========================
+   RESULTADOS
+========================= */
+
+#resultados {
+  margin-top: 40px;
+}
+
+.titulo-resultados {
+  margin-bottom: 18px;
+  color: #374151;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+
+/* =========================
+   CARD DE PRODUTO
+========================= */
+
+.card-produto {
+  padding: 22px;
+
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.card-produto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+.card-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.nome-produto {
+  margin-bottom: 5px;
+  color: var(--texto-forte);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.marca-produto {
+  color: var(--texto-suave);
+  font-size: 14px;
+}
+
+.status {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-disponivel {
+  background: #dcfce7;
+  color: var(--verde);
+}
+
+.status-indisponivel {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.preco {
+  margin: 20px 0 12px;
+  color: var(--verde);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.descricao-produto {
+  min-height: 38px;
+  color: var(--texto-suave);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.localizacao-resumo {
+  margin-top: 18px;
+  padding-top: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  border-top: 1px solid var(--borda);
+
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.localizacao-resumo svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--verde);
+}
+
+.botao-detalhes {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 18px;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: var(--verde);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.botao-detalhes svg {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.2s;
+}
+
+.botao-detalhes:hover svg {
+  transform: translateX(3px);
+}
+
+
+/* =========================
+   MENSAGENS
+========================= */
+
+.mensagem-inicial,
+.mensagem {
+  padding: 30px;
+
+  background: #ffffff;
+  border-radius: var(--raio);
+
+  color: var(--texto-suave);
+  text-align: center;
+}
+
+
+/* =========================
+   DETALHES DO PRODUTO
+========================= */
+
+.voltar {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: var(--verde);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.produto-detalhe-card {
+  max-width: 850px;
+  margin: auto;
+  padding: 35px;
+
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+}
+
+.produto-detalhe-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.produto-detalhe-topo h1 {
+  margin: 5px 0;
+  color: var(--texto-forte);
+  font-size: 32px;
+}
+
+.produto-categoria {
+  color: var(--verde-claro);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.produto-marca {
+  color: var(--texto-suave);
+  font-size: 15px;
+}
+
+.produto-detalhe-preco {
+  margin-top: 28px;
+  color: var(--verde);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.produto-detalhe-descricao {
+  margin-top: 18px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.produto-localizacao {
+  margin-top: 30px;
+  padding: 22px;
+
+  background: var(--verde-suave);
+  border-radius: var(--raio);
+}
+
+.produto-localizacao h2 {
+  margin: 0 0 18px;
+  color: var(--verde);
+  font-size: 19px;
+}
+
+.produto-localizacao-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.localizacao-item {
+  padding: 14px;
+
+  background: #ffffff;
+  border: 1px solid #dcfce7;
+  border-radius: 9px;
+}
+
+.localizacao-item span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--texto-suave);
+  font-size: 12px;
+}
+
+.localizacao-item strong {
+  color: var(--texto-forte);
+  font-size: 15px;
+}
+
+.botao-mapa {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 18px;
+
+  background: var(--verde-claro);
+  border-radius: 9px;
+
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.botao-mapa:hover {
+  background: var(--verde-hover);
+}
+
+.area-receita-produto {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid var(--borda);
+}
+
+.area-receita-produto h2 {
+  margin-bottom: 7px;
+  color: var(--texto-forte);
+}
+
+.area-receita-produto p {
+  color: var(--texto-suave);
+}
+
+.botao-receita {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 18px;
+
+  border: 1px solid var(--verde-claro);
+  border-radius: 9px;
+
+  color: var(--verde);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.botao-receita:hover {
+  background: var(--verde-suave);
+}
+
+.produto-indisponivel {
+  margin-top: 28px;
+  padding: 18px;
+
+  background: #fef2f2;
+  color: #991b1b;
+
+  border-radius: 10px;
+}
+
+
+/* =========================
+   RECEITA
+========================= */
+
+.receita-card {
+  max-width: 900px;
+  margin: auto;
+  padding: 35px;
+
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+}
+
+.receita-etiqueta {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  color: var(--verde-claro);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.receita-card h1 {
+  margin: 0 0 12px;
+  color: var(--texto-forte);
+  font-size: 34px;
+}
+
+.receita-descricao {
+  max-width: 700px;
+  color: var(--texto-suave);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.receita-resumo {
+  display: flex;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.receita-info {
+  min-width: 160px;
+  padding: 14px 18px;
+
+  background: var(--verde-suave);
+  border-radius: 10px;
+}
+
+.receita-info span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--texto-suave);
+  font-size: 12px;
+}
+
+.receita-info strong {
+  color: var(--verde);
+  font-size: 16px;
+}
+
+.receita-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  margin-top: 35px;
+}
+
+.receita-conteudo h2 {
+  margin: 0 0 18px;
+  color: var(--verde);
+  font-size: 21px;
+}
+
+.lista-ingredientes {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.lista-ingredientes li,
+.lista-preparo li {
+  color: #374151;
+  line-height: 1.6;
+}
+
+.lista-ingredientes li {
+  margin-bottom: 10px;
+}
+
+.lista-preparo {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-preparo li {
+  margin-bottom: 16px;
+}
+
+
+/* =========================
+   MAPA — INFORMAÇÕES
+========================= */
+
+.mapa-produto-info {
+  margin-bottom: 30px;
+  padding: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+}
+
+.mapa-etiqueta {
+  color: var(--verde-claro);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mapa-produto-info h1 {
+  margin: 5px 0;
+  color: var(--texto-forte);
+}
+
+.mapa-produto-info p {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+.mapa-localizacao-resumo {
+  display: flex;
+  gap: 10px;
+}
+
+.mapa-localizacao-resumo div {
+  min-width: 100px;
+  padding: 12px;
+
+  background: var(--verde-suave);
+  border-radius: 9px;
+}
+
+.mapa-localizacao-resumo span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--texto-suave);
+  font-size: 11px;
+}
+
+.mapa-localizacao-resumo strong {
+  color: var(--verde);
+}
+
+
+/* =========================
+   MAPA — PÁGINA DA ROTA
+========================= */
+
+.mapa-pagina {
+  padding: 30px;
+
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+}
+
+.mapa-pagina h2 {
+  margin: 0 0 6px;
+  color: var(--verde);
+}
+
+.mapa-pagina > p {
+  margin: 0 0 28px;
+  color: var(--texto-suave);
+}
+
+.mapa-produto-wrapper {
+  max-width: 760px;
+  margin: 30px auto;
+  padding: 12px;
+
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+}
+
+#mapaProduto svg,
+#mapaExploracao svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+   ESCOLHA DO TOTEM
+========================= */
+
+.escolha-totem {
+  max-width: 760px;
+  margin: 30px auto 20px;
+  padding: 24px;
+
+  background: #f8faf8;
+  border: 1px solid #dfe7df;
+  border-radius: 16px;
+}
+
+.escolha-totem h3 {
+  margin: 6px 0;
+  color: #163a23;
+}
+
+.escolha-totem p {
+  margin: 0 0 18px;
+  color: #667066;
+}
+
+.botoes-totem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.botao-totem {
+  min-width: 60px;
+  padding: 11px 18px;
+
+  border: 2px solid var(--verde);
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: var(--verde);
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+
+.botao-totem:hover {
+  background: var(--verde-suave);
+  transform: translateY(-2px);
+}
+
+.botao-totem.ativo {
+  background: var(--verde);
+  color: #ffffff;
+}
+
+
+/* =========================
+   INSTRUÇÕES DA ROTA
+========================= */
+
+.instrucao-rota {
+  display: none;
+  margin-top: 18px;
+  padding: 14px 16px;
+
+  background: #ecfdf3;
+  border-left: 4px solid var(--verde-claro);
+  border-radius: 8px;
+
+  color: #14532d;
+}
+
+.instrucao-rota.visivel {
+  display: block;
+}
+
+.lista-passos-rota {
+  margin-top: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.passo-rota {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.numero-passo {
+  min-width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--verde);
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   EXPLORAR PELO MAPA
+========================= */
+
+.explorar-mapa {
+  margin-top: 80px;
+  padding-top: 50px;
+  border-top: 1px solid var(--borda);
+}
+
+.explorar-mapa-cabecalho {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.explorar-mapa-cabecalho h2 {
+  margin: 8px 0;
+  color: var(--texto-forte);
+  font-size: 30px;
+}
+
+.explorar-mapa-cabecalho p {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+.mapa-exploracao-wrapper {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  padding: 12px;
+
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+}
+
+#produtosSetor {
+  scroll-margin-top: 30px;
+}
+
+.produtos-setor-cabecalho {
+  margin-bottom: 22px;
+}
+
+.produtos-setor-cabecalho span {
+  color: var(--verde-claro);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.produtos-setor-cabecalho h3 {
+  margin: 5px 0;
+  color: var(--texto-forte);
+  font-size: 26px;
+}
+
+.produtos-setor-cabecalho p {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+  padding: 25px;
+  color: #9ca3af;
+  font-size: 13px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   MODO ESCURO
+   ========================================================= */
+
+body.modo-escuro {
+  --fundo: #0f172a;
+  --superficie: #182234;
+  --texto: #f8fafc;
+  --texto-forte: #ffffff;
+  --texto-suave: #d5deea;
+  --borda: #425168;
+
+  background: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+body.modo-escuro main {
+  background: #0f172a !important;
+}
+
+body.modo-escuro .cabecalho {
+  background: #064e2b !important;
+  border-bottom-color: #15803d;
+}
+
+body.modo-escuro .logo,
+body.modo-escuro .logo strong,
+body.modo-escuro .logo span,
+body.modo-escuro .logo svg {
+  color: #ffffff !important;
+  stroke: currentColor;
+}
+
+
+/* Acessibilidade sempre visível */
+
+body.modo-escuro .barra-acessibilidade {
+  background: #172033;
+  border-color: #4b5d76;
+}
+
+body.modo-escuro .botao-acessibilidade,
+body.modo-escuro .percentual-fonte {
+  background: #172033;
+  color: #bbf7d0;
+  border-color: #4ade80;
+}
+
+body.modo-escuro .botao-acessibilidade:hover,
+body.modo-escuro .percentual-fonte:hover {
+  background: #234230;
+}
+
+body.modo-escuro .botao-acessibilidade.ativo {
+  background: #22c55e;
+  color: #052e16;
+}
+
+
+/* Títulos e textos */
+
+body.modo-escuro h1,
+body.modo-escuro h2,
+body.modo-escuro h3,
+body.modo-escuro h4,
+body.modo-escuro strong {
+  color: #ffffff;
+}
+
+body.modo-escuro p,
+body.modo-escuro label {
+  color: #dbe4ef;
+}
+
+body.modo-escuro .mapa-etiqueta,
+body.modo-escuro .produto-categoria,
+body.modo-escuro .produtos-setor-cabecalho span {
+  color: #4ade80 !important;
+}
+
+
+/* Campos */
+
+body.modo-escuro input,
+body.modo-escuro select {
+  background: #182234 !important;
+  color: #ffffff !important;
+  border-color: #64748b !important;
+}
+
+body.modo-escuro input::placeholder {
+  color: #b9c5d4 !important;
+}
+
+body.modo-escuro select option {
+  background: #182234;
+  color: #ffffff;
+}
+
+
+/* Superfícies */
+
+body.modo-escuro .card-produto,
+body.modo-escuro .produto-detalhe-card,
+body.modo-escuro .receita-card,
+body.modo-escuro .mapa-produto-info,
+body.modo-escuro .mapa-pagina,
+body.modo-escuro .mapa-produto-wrapper,
+body.modo-escuro .mapa-exploracao-wrapper,
+body.modo-escuro .escolha-totem,
+body.modo-escuro .mensagem,
+body.modo-escuro .mensagem-inicial {
+  background: #142033 !important;
+  color: #f8fafc !important;
+  border: 1px solid #334155 !important;
+}
+
+body.modo-escuro .produto-localizacao {
+  background: #173225 !important;
+  border: 1px solid #2f5e46 !important;
+}
+
+body.modo-escuro .receita-info,
+body.modo-escuro .mapa-localizacao-resumo div,
+body.modo-escuro .localizacao-item {
+  background: #142033 !important;
+  border: 1px solid #335f45 !important;
+}
+
+body.modo-escuro .card-produto .localizacao-resumo {
+  border-top: 1px solid #334155 !important;
+}
+
+body.modo-escuro .localizacao-item {
+  background: #172033 !important;
+  border-color: #335f45 !important;
+}
+
+
+/* Textos internos */
+
+body.modo-escuro .nome-produto,
+body.modo-escuro .produto-detalhe-topo h1,
+body.modo-escuro .receita-card h1,
+body.modo-escuro .localizacao-item strong {
+  color: #ffffff !important;
+}
+
+body.modo-escuro .marca-produto,
+body.modo-escuro .descricao-produto,
+body.modo-escuro .localizacao-resumo,
+body.modo-escuro .titulo-resultados,
+body.modo-escuro .produto-marca,
+body.modo-escuro .produto-detalhe-descricao,
+body.modo-escuro .receita-descricao,
+body.modo-escuro .lista-ingredientes li,
+body.modo-escuro .lista-preparo li,
+body.modo-escuro .mapa-produto-info p,
+body.modo-escuro .mapa-pagina > p,
+body.modo-escuro .escolha-totem p,
+body.modo-escuro .produtos-setor-cabecalho p,
+body.modo-escuro .explorar-mapa-cabecalho p {
+  color: #d5deea !important;
+}
+
+body.modo-escuro .preco,
+body.modo-escuro .produto-detalhe-preco,
+body.modo-escuro .receita-info strong,
+body.modo-escuro .mapa-localizacao-resumo strong {
+  color: #86efac !important;
+}
+
+
+/* Status */
+
+body.modo-escuro .status-disponivel {
+  background: #17482c;
+  color: #bbf7d0;
+}
+
+body.modo-escuro .status-indisponivel {
+  background: #4b2020;
+  color: #fecaca;
+}
+
+
+/* Autocomplete */
+
+body.modo-escuro .sugestoes-busca {
+  background: #182234 !important;
+  border-color: #425168 !important;
+}
+
+body.modo-escuro .item-sugestao {
+  background: #182234 !important;
+  color: #ffffff !important;
+  border-color: #334155 !important;
+}
+
+body.modo-escuro .item-sugestao:hover {
+  background: #244232 !important;
+}
+
+body.modo-escuro .sugestao-dados strong {
+  color: #ffffff !important;
+}
+
+body.modo-escuro .sugestao-dados span,
+body.modo-escuro .sugestao-vazia {
+  color: #cbd5e1 !important;
+}
+
+body.modo-escuro .sugestao-preco {
+  color: #86efac !important;
+}
+
+
+/* Botões e links */
+
+body.modo-escuro .botao-totem {
+  background: #172033;
+  color: #bbf7d0;
+  border-color: #4ade80;
+}
+
+body.modo-escuro .botao-totem:hover {
+  background: #234230;
+}
+
+body.modo-escuro .botao-totem.ativo {
+  background: #22c55e;
+  color: #052e16;
+}
+
+body.modo-escuro .botao-receita,
+body.modo-escuro .botao-detalhes,
+body.modo-escuro .voltar {
+  color: #86efac;
+}
+
+
+/* Rota */
+
+body.modo-escuro .instrucao-rota {
+  background: #153b28 !important;
+  color: #f0fdf4 !important;
+  border-color: #22c55e !important;
+}
+
+body.modo-escuro .instrucao-rota strong,
+body.modo-escuro .passo-rota {
+  color: #f0fdf4 !important;
+}
+
+
+/* Rodapé */
+
+body.modo-escuro footer {
+  background: #020617;
+  color: #cbd5e1;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+  .cabecalho-conteudo {
+    padding-right: 330px;
+  }
+
+  .barra-acessibilidade {
+    right: 16px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  main {
+    padding: 40px 16px;
+  }
+
+  .inicio h1 {
+    font-size: 30px;
+  }
+
+  .area-busca {
+    flex-direction: column;
+  }
+
+  #botaoPesquisar {
+    min-height: 50px;
+  }
+
+  .lista-produtos {
+    grid-template-columns: 1fr;
+  }
+
+  .card-topo,
+  .produto-detalhe-topo,
+  .mapa-produto-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .produto-localizacao-grid,
+  .receita-conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .receita-resumo,
+  .mapa-localizacao-resumo {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .mapa-localizacao-resumo div {
+    width: 100%;
+  }
+
+  .produto-detalhe-card,
+  .receita-card,
+  .mapa-pagina {
+    padding: 22px;
+  }
+
+  .produto-detalhe-topo h1 {
+    font-size: 27px;
+  }
+
+  .receita-card h1 {
+    font-size: 28px;
+  }
+
+  /*
+    No celular, a acessibilidade
+    continua no cabeçalho, mas menor.
+  */
+
+  .cabecalho {
+    padding-bottom: 58px;
+  }
+
+  .cabecalho-conteudo {
+    min-height: 78px;
+    padding: 16px;
+  }
+
+  .barra-acessibilidade {
+    top: auto;
+    right: 12px;
+    bottom: 10px;
+    transform: none;
+
+    gap: 4px;
+  }
+
+  .botao-acessibilidade {
+    min-width: 36px;
+    padding: 0 7px;
+  }
+
+  .percentual-fonte {
+    min-width: 54px;
+  }
+
+}
+
+
+@media (max-width: 430px) {
+
+  .logo span {
+    font-size: 21px;
+  }
+
+  .logo svg {
+    width: 31px;
+    height: 31px;
+  }
+
+  .barra-acessibilidade {
+    left: 12px;
+    right: 12px;
+    justify-content: flex-end;
+  }
+
+}
+
+/* =========================================================
+   AJUSTE FINAL DOS CARDS NO MODO ESCURO
+   ========================================================= */
+
+/* FUNDO GERAL */
+body.modo-escuro {
+  background: #0f172a !important;
+}
+
+
+/* =========================
+   CARDS DA PESQUISA
+========================= */
+
+body.modo-escuro .card-produto {
+  background: #1d2f2a !important;
+
+  border: 1px solid #36584c !important;
+
+  box-shadow:
+    0 4px 14px
+    rgba(0, 0, 0, 0.18) !important;
+}
+
+
+body.modo-escuro .card-produto:hover {
+  background: #223a32 !important;
+
+  border-color: #4b806b !important;
+
+  box-shadow:
+    0 8px 22px
+    rgba(0, 0, 0, 0.28) !important;
+}
+
+
+/* LINHA DENTRO DO CARD */
+
+body.modo-escuro
+.card-produto
+.localizacao-resumo {
+  border-top:
+    1px solid #45645a !important;
+}
+
+
+/* =========================
+   CARD DE DETALHES
+========================= */
+
+body.modo-escuro
+.produto-detalhe-card {
+  background: #1a2638 !important;
+
+  border:
+    1px solid #40516a !important;
+
+  box-shadow:
+    0 5px 18px
+    rgba(0, 0, 0, 0.2) !important;
+}
+
+
+/* =========================
+   ONDE ENCONTRAR
+========================= */
+
+body.modo-escuro
+.produto-localizacao {
+  background: #173d2b !important;
+
+  border:
+    1px solid #337052 !important;
+}
+
+
+body.modo-escuro
+.produto-localizacao h2 {
+  color: #bbf7d0 !important;
+}
+
+
+/* QUADRINHOS:
+   CORREDOR / SEÇÃO / PRATELEIRA */
+
+body.modo-escuro
+.localizacao-item {
+  background: #152238 !important;
+
+  border:
+    1px solid #48627c !important;
+}
+
+
+body.modo-escuro
+.localizacao-item span {
+  color: #b8c5d5 !important;
+}
+
+
+body.modo-escuro
+.localizacao-item strong {
+  color: #ffffff !important;
+}
+
+
+/* =========================
+   TEXTO DOS CARDS
+========================= */
+
+body.modo-escuro
+.card-produto
+.nome-produto {
+  color: #ffffff !important;
+}
+
+
+body.modo-escuro
+.card-produto
+.marca-produto,
+
+body.modo-escuro
+.card-produto
+.descricao-produto,
+
+body.modo-escuro
+.card-produto
+.localizacao-resumo {
+  color: #e2e8f0 !important;
+}
+
+
+body.modo-escuro
+.card-produto
+.preco {
+  color: #6ee7a5 !important;
+}
+
+/* =========================
+   ÁUDIO DA ROTA
+========================= */
+
+.acoes-voz {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 18px;
+  padding-top: 16px;
+
+  border-top:
+    1px solid
+    rgba(22, 101, 52, 0.18);
+}
+
+
+.botao-ouvir-rota,
+.botao-parar-rota {
+  min-height: 42px;
+  padding: 10px 16px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 9px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.botao-ouvir-rota svg,
+.botao-parar-rota svg {
+  width: 19px;
+  height: 19px;
+}
+
+
+.botao-ouvir-rota {
+  border:
+    2px solid #166534;
+
+  background:
+    #166534;
+
+  color:
+    #ffffff;
+}
+
+
+.botao-ouvir-rota:hover {
+  background:
+    #15803d;
+
+  border-color:
+    #15803d;
+}
+
+
+.botao-ouvir-rota.falando {
+  background:
+    #14532d;
+
+  border-color:
+    #14532d;
+}
+
+
+.botao-parar-rota {
+  border:
+    1px solid #166534;
+
+  background:
+    #ffffff;
+
+  color:
+    #166534;
+}
+
+
+.botao-parar-rota:hover {
+  background:
+    #f0fdf4;
+}
+
+
+/* MODO ESCURO */
+
+body.modo-escuro
+.acoes-voz {
+  border-top-color:
+    #37644d;
+}
+
+
+body.modo-escuro
+.botao-ouvir-rota {
+  background:
+    #22c55e;
+
+  border-color:
+    #22c55e;
+
+  color:
+    #052e16;
+}
+
+
+body.modo-escuro
+.botao-ouvir-rota:hover {
+  background:
+    #4ade80;
+
+  border-color:
+    #4ade80;
+}
+
+
+body.modo-escuro
+.botao-parar-rota {
+  background:
+    #172033;
+
+  border-color:
+    #4ade80;
+
+  color:
+    #bbf7d0;
+}
+
+/* =========================
+   PESQUISA POR VOZ
+========================= */
+
+.botao-voz-busca {
+  width: 52px;
+  min-width: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid #166534;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #166534;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+
+
+.botao-voz-busca svg {
+  width: 21px;
+  height: 21px;
+}
+
+
+.botao-voz-busca:hover {
+  background: #f0fdf4;
+
+  transform:
+    translateY(-1px);
+}
+
+
+.botao-voz-busca.ouvindo {
+  background: #166534;
+
+  color: #ffffff;
+
+  animation:
+    pulso-microfone
+    1s infinite;
+}
+
+
+.botao-voz-busca:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+
+@keyframes pulso-microfone {
+
+  0% {
+    box-shadow:
+      0 0 0 0
+      rgba(22, 101, 52, 0.35);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 10px
+      rgba(22, 101, 52, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0
+      rgba(22, 101, 52, 0);
+  }
+
+}
+
+
+/* MODO ESCURO */
+
+body.modo-escuro
+.botao-voz-busca {
+  background: #172033;
+
+  border-color: #4ade80;
+
+  color: #bbf7d0;
+}
+
+
+body.modo-escuro
+.botao-voz-busca:hover {
+  background: #234230;
+}
+
+
+body.modo-escuro
+.botao-voz-busca.ouvindo {
+  background: #22c55e;
+
+  color: #052e16;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+  .botao-voz-busca {
+    width: 100%;
+
+    min-height: 48px;
+  }
+
+}
+
+/* =========================================================
+   NAVEGAÇÃO GUIADA POR VOZ
+   ========================================================= */
+
+.botao-assistente-voz svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* MICROFONE OUVINDO */
+
+.botao-assistente-voz.ouvindo {
+  background: #166534;
+  color: #ffffff;
+
+  animation:
+    pulso-assistente
+    1.2s infinite;
+}
+
+
+@keyframes pulso-assistente {
+
+  0% {
+    box-shadow:
+      0 0 0 0
+      rgba(22, 101, 52, 0.45);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 10px
+      rgba(22, 101, 52, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0
+      rgba(22, 101, 52, 0);
+  }
+
+}
+
+
+/* PRODUTO SELECIONADO PELA VOZ */
+
+.resultado-voz-ativo {
+  outline:
+    3px solid #16a34a !important;
+
+  outline-offset:
+    3px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(22, 163, 74, 0.2) !important;
+}
+
+
+/* MODO ESCURO */
+
+body.modo-escuro
+.botao-assistente-voz.ouvindo {
+  background: #22c55e;
+
+  color: #052e16;
+}
+
+
+body.modo-escuro
+.resultado-voz-ativo {
+  outline-color:
+    #4ade80 !important;
+
+  box-shadow:
+    0 8px 25px
+    rgba(74, 222, 128, 0.22) !important;
+}
+
+
+/* =========================================================
+   NOVA HOME — MAPA COMO PROTAGONISTA
+   ========================================================= */
+
+.home-mapa {
+  max-width: 1180px;
+  padding-top: 42px;
+}
+
+
+/* =========================
+   APRESENTAÇÃO
+========================= */
+
+.home-apresentacao {
+  max-width: 760px;
+  margin: 0 auto 30px;
+
+  text-align: center;
+}
+
+
+.home-etiqueta {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #16a34a;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+}
+
+
+.home-apresentacao h1 {
+  margin:
+    0 0 10px;
+
+  color: #111827;
+
+  font-size: 38px;
+}
+
+
+.home-apresentacao p {
+  max-width: 650px;
+
+  margin: auto;
+
+  color: #6b7280;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   BUSCA
+========================= */
+
+.home-busca {
+  max-width: 820px;
+
+  margin:
+    0 auto 26px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 16px;
+}
+
+
+/* =========================
+   TOTEM
+========================= */
+
+.home-totem {
+  max-width: 820px;
+
+  margin:
+    0 auto 36px;
+
+  padding: 20px 22px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr auto;
+
+  gap:
+    10px 28px;
+
+  align-items: center;
+
+  background: #f0fdf4;
+
+  border:
+    1px solid #bbf7d0;
+
+  border-radius: 16px;
+}
+
+
+.home-totem-texto h2 {
+  margin:
+    0 0 5px;
+
+  color: #14532d;
+
+  font-size: 20px;
+}
+
+
+.home-totem-texto p {
+  margin: 0;
+
+  color: #4b6354;
+
+  font-size: 14px;
+}
+
+
+.home-totem-botoes {
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+}
+
+
+.botao-totem-home {
+  min-width: 48px;
+
+  min-height: 44px;
+
+  padding:
+    8px 13px;
+
+  border:
+    2px solid #166534;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #166534;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+
+
+.botao-totem-home:hover {
+  background: #dcfce7;
+
+  transform:
+    translateY(-1px);
+}
+
+
+.botao-totem-home.ativo {
+  background: #166534;
+
+  color: #ffffff;
+}
+
+
+.home-totem-status {
+  grid-column:
+    1 / -1;
+
+  padding-top: 8px;
+
+  color: #166534;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   MAPA PRINCIPAL
+========================= */
+
+.home-mapa-principal {
+  margin-top: 0;
+
+  padding-top: 38px;
+
+  border-top:
+    1px solid #dfe5e1;
+}
+
+
+.home-mapa-principal
+.explorar-mapa-cabecalho {
+  margin-bottom: 22px;
+}
+
+
+.home-mapa-principal
+.mapa-exploracao-wrapper {
+  max-width: 900px;
+
+  margin:
+    0 auto 35px;
+
+  padding: 14px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px
+    rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   RESULTADOS
+========================= */
+
+.home-resultados {
+  max-width: 900px;
+
+  margin:
+    35px auto 0;
+}
+
+
+/* =========================
+   MODO ESCURO
+========================= */
+
+body.modo-escuro
+.home-apresentacao h1 {
+  color: #ffffff;
+}
+
+
+body.modo-escuro
+.home-apresentacao p {
+  color: #d5deea;
+}
+
+
+body.modo-escuro
+.home-busca {
+  background: #182234;
+
+  border-color: #425168;
+}
+
+
+body.modo-escuro
+.home-totem {
+  background: #173225;
+
+  border-color: #337052;
+}
+
+
+body.modo-escuro
+.home-totem-texto h2 {
+  color: #bbf7d0;
+}
+
+
+body.modo-escuro
+.home-totem-texto p {
+  color: #d5deea;
+}
+
+
+body.modo-escuro
+.botao-totem-home {
+  background: #172033;
+
+  color: #bbf7d0;
+
+  border-color: #4ade80;
+}
+
+
+body.modo-escuro
+.botao-totem-home:hover {
+  background: #234230;
+}
+
+
+body.modo-escuro
+.botao-totem-home.ativo {
+  background: #22c55e;
+
+  color: #052e16;
+}
+
+
+body.modo-escuro
+.home-totem-status {
+  color: #86efac;
+}
+
+
+body.modo-escuro
+.home-mapa-principal {
+  border-top-color: #334155;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 700px) {
+
+  .home-apresentacao h1 {
+    font-size: 30px;
+  }
+
+
+  .home-busca {
+    padding: 16px;
+  }
+
+
+  .home-totem {
+    grid-template-columns: 1fr;
+  }
+
+
+  .home-totem-botoes {
+    justify-content: flex-start;
+  }
+
+
+  .home-totem-status {
+    grid-column: auto;
+  }
+
+
+  .home-mapa-principal
+  .mapa-exploracao-wrapper {
+    padding: 8px;
+  }
+
+}
+
+/* =========================================================
+   HOME TOTEM — NOVA IDENTIDADE VISUAL
+   ========================================================= */
+
+body.pagina-home-totem {
+  --azul-anhanvera: #112a4b;
+  --azul-anhanvera-claro: #18395f;
+  --laranja-anhanvera: #f47a1f;
+  --laranja-suave: #fff2e8;
+  --verde-anhanvera: #166534;
+
+  --fundo-home: #f4f7fb;
+  --card-home: #ffffff;
+  --borda-home: #dbe2ea;
+
+  background: var(--fundo-home);
+
+  color: #172033;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.pagina-home-totem
+.cabecalho {
+  min-height: 88px;
+
+  background:
+    var(--azul-anhanvera) !important;
+
+  border-bottom: none;
+}
+
+
+.pagina-home-totem
+.cabecalho-conteudo {
+  max-width: 1500px;
+
+  min-height: 88px;
+
+  margin: auto;
+
+  padding:
+    14px 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 30px;
+}
+
+
+/* MARCA */
+
+.marca-anhanvera {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+}
+
+
+.marca-carrinho {
+  width: 52px;
+
+  height: 52px;
+
+  color:
+    var(--laranja-anhanvera);
+}
+
+
+.marca-texto {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 0.95;
+}
+
+
+.marca-texto span {
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+.marca-texto strong {
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  letter-spacing:
+    -0.02em;
+}
+
+
+.marca-texto i {
+  width: 95px;
+
+  height: 4px;
+
+  margin:
+    7px 0 0 auto;
+
+  background:
+    var(--laranja-anhanvera);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   UTILIDADES DO CABEÇALHO
+========================================================= */
+
+.cabecalho-utilidades {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 18px;
+
+  color: #ffffff;
+}
+
+
+.info-tempo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+
+.info-tempo svg {
+  width: 19px;
+
+  height: 19px;
+
+  flex-shrink: 0;
+}
+
+
+.info-tempo strong {
+  color: #ffffff;
+
+  font-size: 16px;
+}
+
+
+.divisor-topo {
+  width: 1px;
+
+  height: 33px;
+
+  background:
+    rgba(255, 255, 255, 0.36);
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE NO TOPO
+========================================================= */
+
+.pagina-home-totem
+.acessibilidade-slot {
+  display: flex;
+
+  align-items: center;
+}
+
+
+.pagina-home-totem
+.barra-acessibilidade {
+  position: static;
+
+  transform: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  background: transparent;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+.pagina-home-totem
+.botao-acessibilidade,
+
+.pagina-home-totem
+.percentual-fonte {
+  height: 38px;
+
+  min-width: 38px;
+
+  padding:
+    0 9px;
+
+  background:
+    transparent;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.35);
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+
+.pagina-home-totem
+.percentual-fonte {
+  min-width: 54px;
+
+  background:
+    rgba(255, 255, 255, 0.14);
+}
+
+
+.pagina-home-totem
+.botao-acessibilidade:hover,
+
+.pagina-home-totem
+.percentual-fonte:hover {
+  background:
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.pagina-home-totem
+.botao-tema,
+
+.pagina-home-totem
+.botao-assistente-voz {
+  width: auto;
+
+  gap: 7px;
+
+  border-color: transparent;
+}
+
+
+.pagina-home-totem
+.texto-controle {
+  white-space: nowrap;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+.pagina-home-totem
+.botao-acessibilidade.ativo {
+  background:
+    var(--laranja-anhanvera);
+
+  border-color:
+    var(--laranja-anhanvera);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.pagina-home-totem
+.home-totem {
+  max-width: 1500px;
+
+  margin: auto;
+
+  padding:
+    30px 34px 55px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.home-intro {
+  display: flex;
+
+  align-items: stretch;
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+
+.detalhe-laranja {
+  width: 6px;
+
+  min-height: 74px;
+
+  flex-shrink: 0;
+
+  background:
+    var(--laranja-anhanvera);
+
+  border-radius: 999px;
+}
+
+
+.home-intro h1 {
+  margin: 0;
+
+  color:
+    var(--azul-anhanvera);
+
+  font-size: 42px;
+
+  line-height: 1.05;
+
+  letter-spacing:
+    -0.035em;
+}
+
+
+.home-intro p {
+  margin:
+    7px 0 0;
+
+  color: #536071;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   PAINEL DE BUSCA
+========================================================= */
+
+.painel-busca-home {
+  min-height: 76px;
+
+  margin-bottom: 22px;
+
+  padding:
+    12px 16px;
+
+  display: grid;
+
+  grid-template-columns:
+    310px 1px
+    minmax(300px, 1fr)
+    52px
+    205px;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background: #ffffff;
+
+  border:
+    1px solid var(--borda-home);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 4px 14px
+    rgba(17, 42, 75, 0.05);
+}
+
+
+/* CATEGORIA */
+
+.home-categoria {
+  height: 50px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.home-categoria > svg {
+  width: 24px;
+
+  height: 24px;
+
+  position: absolute;
+
+  left: 14px;
+
+  z-index: 2;
+
+  color:
+    var(--azul-anhanvera);
+
+  pointer-events: none;
+}
+
+
+.pagina-home-totem
+#categoria {
+  width: 100%;
+
+  height: 50px;
+
+  padding:
+    0 42px 0 48px;
+
+  border:
+    1px solid #b9c5d3;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color:
+    var(--azul-anhanvera);
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.divisor-busca {
+  width: 1px;
+
+  height: 38px;
+
+  background: #ccd4dd;
+}
+
+
+/* CAMPO */
+
+.home-campo-busca {
+  height: 50px;
+}
+
+
+.pagina-home-totem
+.home-campo-busca
+#campoBusca {
+  height: 50px;
+
+  padding:
+    0 15px 0 48px;
+
+  border:
+    1px solid #b9c5d3;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  font-size: 16px;
+}
+
+
+.icone-lupa-campo {
+  width: 22px;
+
+  height: 22px;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 16px;
+
+  z-index: 3;
+
+  transform:
+    translateY(-50%);
+
+  color:
+    var(--azul-anhanvera);
+
+  pointer-events: none;
+}
+
+
+/* MICROFONE */
+
+.pagina-home-totem
+.botao-voz-busca {
+  width: 50px;
+
+  min-width: 50px;
+
+  height: 50px;
+
+  border:
+    1px solid #c5cfda;
+
+  border-radius: 10px;
+
+  background: #eef3f9;
+
+  color:
+    var(--azul-anhanvera);
+}
+
+
+.pagina-home-totem
+.botao-voz-busca:hover {
+  background: #e4ebf4;
+}
+
+
+/* PESQUISAR */
+
+.pagina-home-totem
+#botaoPesquisar {
+  min-height: 50px;
+
+  padding:
+    0 22px;
+
+  border-radius: 10px;
+
+  background:
+    var(--azul-anhanvera);
+
+  color: #ffffff;
+
+  font-size: 16px;
+}
+
+
+.pagina-home-totem
+#botaoPesquisar:hover {
+  background:
+    var(--azul-anhanvera-claro);
+}
+
+
+/* =========================================================
+   GRID PRINCIPAL
+========================================================= */
+
+.home-grid-principal {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.75fr)
+    minmax(320px, 0.85fr);
+
+  gap: 22px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   PAINÉIS
+========================================================= */
+
+.painel-mapa-home,
+.painel-totem-home,
+.painel-ajuda-home {
+  background:
+    var(--card-home);
+
+  border:
+    1px solid
+    var(--borda-home);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(17, 42, 75, 0.055);
+}
+
+
+.painel-mapa-home {
+  padding: 20px;
+}
+
+
+.painel-titulo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 16px;
+}
+
+
+.painel-titulo h2 {
+  margin: 0;
+
+  color:
+    var(--azul-anhanvera);
+
+  font-size: 24px;
+}
+
+
+.painel-titulo-icone {
+  width: 28px;
+
+  height: 28px;
+}
+
+
+.painel-titulo-icone svg {
+  width: 100%;
+
+  height: 100%;
+}
+
+
+.painel-titulo-icone.laranja {
+  color:
+    var(--laranja-anhanvera);
+}
+
+
+/* =========================================================
+   MAPA EXISTENTE
+========================================================= */
+
+.pagina-home-totem
+.mapa-exploracao-wrapper {
+  max-width: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  box-shadow: none;
+}
+
+
+.pagina-home-totem
+#mapaExploracao svg {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+}
+
+
+.pagina-home-totem
+#produtosSetor:not(:empty) {
+  margin-top: 22px;
+}
+
+
+/* =========================================================
+   COLUNA DIREITA
+========================================================= */
+
+.home-coluna-direita {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   TOTEM
+========================================================= */
+
+.painel-totem-home {
+  padding:
+    25px 25px 22px;
+}
+
+
+.painel-totem-titulo {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+}
+
+
+.painel-totem-titulo > svg {
+  width: 36px;
+
+  height: 36px;
+
+  flex-shrink: 0;
+
+  color:
+    var(--laranja-anhanvera);
+}
+
+
+.painel-totem-titulo h2 {
+  margin: 0;
+
+  color:
+    var(--azul-anhanvera);
+
+  font-size: 25px;
+
+  line-height: 1.15;
+}
+
+
+.painel-totem-titulo p {
+  margin:
+    8px 0 0;
+
+  color: #586577;
+
+  font-size: 15px;
+
+  line-height: 1.45;
+}
+
+
+.grade-totens {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+
+.botao-totem-home {
+  min-height: 68px;
+
+  border:
+    2px solid
+    var(--verde-anhanvera);
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  color:
+    var(--verde-anhanvera);
+
+  font-size: 26px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s,
+    background 0.18s,
+    color 0.18s,
+    box-shadow 0.18s;
+}
+
+
+.botao-totem-home:hover {
+  transform:
+    translateY(-2px);
+
+  background: #f1faf4;
+}
+
+
+.botao-totem-home.ativo {
+  background:
+    linear-gradient(
+      135deg,
+      #166534,
+      #237a45
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 6px 16px
+    rgba(22, 101, 52, 0.22);
+}
+
+
+.grade-totens
+.botao-totem-home:nth-child(4) {
+  grid-column:
+    1 / 2;
+}
+
+
+.grade-totens
+.botao-totem-home:nth-child(5) {
+  grid-column:
+    2 / 3;
+}
+
+
+/* CONFIRMAÇÃO */
+
+.totem-confirmacao {
+  margin-top: 22px;
+
+  padding:
+    16px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background:
+    #edf8ef;
+
+  border-radius: 13px;
+}
+
+
+.totem-check {
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background:
+    var(--verde-anhanvera);
+
+  color: #ffffff;
+
+  font-size: 24px;
+
+  font-weight: 800;
+}
+
+
+.totem-confirmacao div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+.totem-confirmacao strong {
+  color:
+    var(--verde-anhanvera);
+
+  font-size: 17px;
+}
+
+
+.totem-confirmacao span {
+  color: #41524a;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   AJUDA
+========================================================= */
+
+.painel-ajuda-home {
+  padding: 21px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+}
+
+
+.icone-ajuda-home {
+  width: 60px;
+
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background:
+    var(--laranja-suave);
+
+  color:
+    var(--laranja-anhanvera);
+}
+
+
+.icone-ajuda-home svg {
+  width: 31px;
+
+  height: 31px;
+}
+
+
+.painel-ajuda-home strong {
+  color:
+    var(--azul-anhanvera);
+
+  font-size: 18px;
+}
+
+
+.painel-ajuda-home p {
+  margin:
+    5px 0 0;
+
+  color: #5d6876;
+
+  font-size: 14px;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   RESULTADOS
+========================================================= */
+
+.home-resultados {
+  margin-top: 24px;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.pagina-home-totem footer {
+  background:
+    var(--azul-anhanvera);
+
+  color:
+    rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   MODO ESCURO — HOME
+========================================================= */
+
+body.pagina-home-totem.modo-escuro {
+  background:
+    #0d1625 !important;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.home-intro h1,
+
+body.pagina-home-totem.modo-escuro
+.painel-titulo h2,
+
+body.pagina-home-totem.modo-escuro
+.painel-totem-titulo h2,
+
+body.pagina-home-totem.modo-escuro
+.painel-ajuda-home strong {
+  color:
+    #f8fafc !important;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.home-intro p,
+
+body.pagina-home-totem.modo-escuro
+.painel-totem-titulo p,
+
+body.pagina-home-totem.modo-escuro
+.painel-ajuda-home p {
+  color:
+    #cbd5e1 !important;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.painel-busca-home,
+
+body.pagina-home-totem.modo-escuro
+.painel-mapa-home,
+
+body.pagina-home-totem.modo-escuro
+.painel-totem-home,
+
+body.pagina-home-totem.modo-escuro
+.painel-ajuda-home {
+  background:
+    #152238 !important;
+
+  border-color:
+    #34445c !important;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.home-categoria
+#categoria,
+
+body.pagina-home-totem.modo-escuro
+.home-campo-busca
+#campoBusca {
+  background:
+    #101c2e !important;
+
+  color:
+    #ffffff !important;
+
+  border-color:
+    #52627a !important;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.mapa-exploracao-wrapper {
+  background:
+    #ffffff !important;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.botao-totem-home {
+  background:
+    #101c2e;
+
+  color:
+    #bbf7d0;
+
+  border-color:
+    #4ade80;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.botao-totem-home.ativo {
+  background:
+    #22c55e;
+
+  color:
+    #052e16;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.totem-confirmacao {
+  background:
+    #173225;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.totem-confirmacao span {
+  color:
+    #d4e6da;
+}
+
+
+/* =========================================================
+   PRIMEIRO AJUSTE RESPONSIVO
+   refinaremos depois
+========================================================= */
+
+@media (
+  max-width: 1100px
+) {
+
+  .cabecalho-utilidades
+  .info-data {
+    display: none;
+  }
+
+
+  .home-grid-principal {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .home-coluna-direita {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+
+  .painel-busca-home {
+    grid-template-columns:
+      240px 1px
+      minmax(220px, 1fr)
+      50px
+      160px;
+  }
+
+}
+
+
+@media (
+  max-width: 760px
+) {
+
+  .pagina-home-totem
+  .cabecalho-conteudo {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+
+  .cabecalho-utilidades {
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
+
+
+  .painel-busca-home {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .divisor-busca {
+    display: none;
+  }
+
+
+  .pagina-home-totem
+  #botaoPesquisar,
+
+  .pagina-home-totem
+  .botao-voz-busca {
+    width: 100%;
+  }
+
+
+  .home-coluna-direita {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .home-intro h1 {
+    font-size: 32px;
+  }
+
+}
+
+/* =========================================================
+   CORREÇÃO DA HOME NOVA
+   remove conflitos com a antiga .home-totem
+========================================================= */
+
+body.pagina-home-totem main.home-totem {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 1500px !important;
+
+  margin: 0 auto !important;
+
+  padding: 30px 34px 55px !important;
+
+  background: transparent !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  gap: 0 !important;
+
+  align-items: initial !important;
+}
+
+
+/* INTRO OCUPA A LARGURA NORMAL */
+
+body.pagina-home-totem
+.home-intro {
+  width: 100% !important;
+
+  display: flex !important;
+
+  margin-bottom: 24px !important;
+}
+
+
+/* BUSCA OCUPA TODA A LINHA */
+
+body.pagina-home-totem
+.painel-busca-home {
+  width: 100% !important;
+
+  max-width: none !important;
+
+  margin:
+    0 0 22px !important;
+}
+
+
+/* MAPA + TOTEM */
+
+body.pagina-home-totem
+.home-grid-principal {
+  width: 100% !important;
+
+  display: grid !important;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(340px, 0.8fr) !important;
+
+  gap: 22px !important;
+
+  align-items: start !important;
+}
+
+
+/* MAPA NÃO PODE ENCOLHER */
+
+body.pagina-home-totem
+.painel-mapa-home {
+  width: 100% !important;
+
+  min-width: 0 !important;
+}
+
+
+body.pagina-home-totem
+.mapa-exploracao-wrapper {
+  width: 100% !important;
+
+  max-width: none !important;
+
+  margin: 0 !important;
+}
+
+
+body.pagina-home-totem
+#mapaExploracao {
+  width: 100% !important;
+}
+
+
+body.pagina-home-totem
+#mapaExploracao svg {
+  display: block !important;
+
+  width: 100% !important;
+
+  height: auto !important;
+}
+
+
+/* COLUNA DO TOTEM */
+
+body.pagina-home-totem
+.home-coluna-direita {
+  width: 100% !important;
+
+  min-width: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  gap: 18px !important;
+}
+
+
+body.pagina-home-totem
+.painel-totem-home,
+
+body.pagina-home-totem
+.painel-ajuda-home {
+  width: 100% !important;
+}
+
+
+/* RESULTADOS DEPOIS DO MAPA */
+
+body.pagina-home-totem
+.home-resultados {
+  width: 100% !important;
+
+  max-width: none !important;
+
+  margin-top: 24px !important;
+}
+
+/* =========================================================
+   TOTEM MAIS COMPACTO
+========================================================= */
+
+body.pagina-home-totem
+.painel-totem-home {
+  padding: 18px 18px 16px !important;
+}
+
+
+body.pagina-home-totem
+.painel-totem-titulo {
+  gap: 10px !important;
+}
+
+
+body.pagina-home-totem
+.painel-totem-titulo > svg {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+
+body.pagina-home-totem
+.painel-totem-titulo h2 {
+  font-size: 20px !important;
+  line-height: 1.1 !important;
+}
+
+
+body.pagina-home-totem
+.painel-totem-titulo p {
+  margin-top: 5px !important;
+
+  font-size: 13px !important;
+
+  line-height: 1.35 !important;
+}
+
+
+/* BOTÕES */
+
+body.pagina-home-totem
+.grade-totens {
+  margin-top: 16px !important;
+
+  gap: 8px !important;
+}
+
+
+body.pagina-home-totem
+.botao-totem-home {
+  min-height: 50px !important;
+
+  border-radius: 10px !important;
+
+  font-size: 21px !important;
+}
+
+
+/* CONFIRMAÇÃO */
+
+body.pagina-home-totem
+.totem-confirmacao {
+  margin-top: 14px !important;
+
+  padding: 11px 13px !important;
+
+  gap: 10px !important;
+}
+
+
+body.pagina-home-totem
+.totem-check {
+  width: 34px !important;
+
+  height: 34px !important;
+
+  font-size: 19px !important;
+}
+
+
+body.pagina-home-totem
+.totem-confirmacao strong {
+  font-size: 14px !important;
+}
+
+
+body.pagina-home-totem
+.totem-confirmacao span {
+  font-size: 12px !important;
+}
+
+
+/* =========================================================
+   CABEÇALHO DAS TELAS INTERNAS
+   PRODUTO / RECEITA / ROTA
+========================================================= */
+
+body.pagina-interna-totem {
+  background: #f4f7fb;
+}
+
+
+/* CABEÇALHO */
+
+body.pagina-interna-totem
+.cabecalho {
+  min-height: 88px;
+
+  background: #112a4b !important;
+
+  border: none !important;
+}
+
+
+body.pagina-interna-totem
+.cabecalho-conteudo {
+  width: 100%;
+  max-width: 1500px;
+
+  min-height: 88px;
+
+  margin: 0 auto;
+
+  padding: 14px 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* LOGO */
+
+body.pagina-interna-totem
+.marca-anhanvera {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  color: #ffffff;
+}
+
+
+body.pagina-interna-totem
+.marca-carrinho {
+  width: 52px;
+
+  height: 52px;
+
+  color: #f47a1f;
+}
+
+
+body.pagina-interna-totem
+.marca-texto {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 0.95;
+}
+
+
+body.pagina-interna-totem
+.marca-texto span {
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+body.pagina-interna-totem
+.marca-texto strong {
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 800;
+}
+
+
+body.pagina-interna-totem
+.marca-texto i {
+  width: 95px;
+
+  height: 4px;
+
+  margin: 7px 0 0 auto;
+
+  background: #f47a1f;
+
+  border-radius: 50%;
+}
+
+
+/* DATA / HORA */
+
+body.pagina-interna-totem
+.cabecalho-utilidades {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 18px;
+
+  color: #ffffff;
+}
+
+
+body.pagina-interna-totem
+.info-tempo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  white-space: nowrap;
+}
+
+
+body.pagina-interna-totem
+.info-tempo svg {
+  width: 19px;
+
+  height: 19px;
+}
+
+
+body.pagina-interna-totem
+.info-tempo strong {
+  color: #ffffff;
+}
+
+
+body.pagina-interna-totem
+.divisor-topo {
+  width: 1px;
+
+  height: 33px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.35
+  );
+}
+
+
+/* ACESSIBILIDADE */
+
+body.pagina-interna-totem
+.acessibilidade-slot {
+  display: flex;
+
+  align-items: center;
+}
+
+
+body.pagina-interna-totem
+.barra-acessibilidade {
+  position: static !important;
+
+  transform: none !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 8px !important;
+
+  background: transparent !important;
+
+  border: none !important;
+
+  box-shadow: none !important;
+}
+
+
+body.pagina-interna-totem
+.botao-acessibilidade,
+
+body.pagina-interna-totem
+.percentual-fonte {
+  height: 38px;
+
+  min-width: 38px;
+
+  padding: 0 9px;
+
+  background: transparent !important;
+
+  border: 1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.35
+    ) !important;
+
+  border-radius: 8px;
+
+  color: #ffffff !important;
+
+  font-weight: 700;
+}
+
+
+body.pagina-interna-totem
+.percentual-fonte {
+  min-width: 54px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.14
+    ) !important;
+}
+
+
+/* CONTEÚDO */
+
+body.pagina-interna-totem
+main {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 32px 34px 55px;
+}
+
+
+/* VOLTAR */
+
+body.pagina-interna-totem
+.voltar {
+  display: inline-flex;
+
+  margin-bottom: 22px;
+
+  color: #112a4b;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+body.pagina-interna-totem
+.voltar:hover {
+  color: #f47a1f;
+}
+
+/* =========================================================
+   DETALHES DO PRODUTO - NOVA IDENTIDADE
+========================================================= */
+
+body.pagina-interna-totem
+.detalhes-produto {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* CARD PRINCIPAL */
+
+body.pagina-interna-totem
+.produto-detalhe-card {
+  position: relative;
+
+  width: 100%;
+
+  padding: 32px 36px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(17, 42, 75, 0.05);
+
+  overflow: hidden;
+}
+
+
+/* DETALHE LARANJA */
+
+body.pagina-interna-totem
+.produto-detalhe-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background: #f47a1f;
+}
+
+
+/* TOPO */
+
+body.pagina-interna-totem
+.produto-detalhe-topo {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+
+/* CATEGORIA */
+
+body.pagina-interna-totem
+.produto-categoria {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  color: #d85f0d !important;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+
+/* NOME DO PRODUTO */
+
+body.pagina-interna-totem
+.produto-detalhe-topo h1 {
+  margin: 0;
+
+  color: #112a4b !important;
+
+  font-size: 31px;
+
+  line-height: 1.1;
+}
+
+
+/* MARCA */
+
+body.pagina-interna-totem
+.produto-marca {
+  margin-top: 6px;
+
+  color: #667085;
+
+  font-size: 14px;
+}
+
+
+/* DISPONIBILIDADE */
+
+body.pagina-interna-totem
+.status-disponivel {
+  padding: 6px 12px;
+
+  background: #dcfce7;
+
+  color: #166534;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* PREÇO */
+
+body.pagina-interna-totem
+.produto-detalhe-preco {
+  margin-top: 28px;
+
+  color: #112a4b !important;
+
+  font-size: 31px;
+
+  font-weight: 800;
+}
+
+
+/* DESCRIÇÃO */
+
+body.pagina-interna-totem
+.produto-detalhe-descricao {
+  margin-top: 15px;
+
+  color: #475467;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ONDE ENCONTRAR
+========================================================= */
+
+body.pagina-interna-totem
+.produto-localizacao {
+  margin-top: 30px;
+
+  padding: 22px 24px;
+
+  background: #f6faf7 !important;
+
+  border: 1px solid #d9eadf;
+
+  border-radius: 13px;
+}
+
+
+body.pagina-interna-totem
+.produto-localizacao h2 {
+  margin: 0 0 18px;
+
+  color: #112a4b !important;
+
+  font-size: 20px;
+}
+
+
+/* GRID */
+
+body.pagina-interna-totem
+.produto-localizacao-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+
+/* CORREDOR / SEÇÃO / PRATELEIRA */
+
+body.pagina-interna-totem
+.localizacao-item {
+  padding: 13px 14px;
+
+  background: #ffffff !important;
+
+  border: 1px solid #dce5df;
+
+  border-radius: 9px;
+}
+
+
+body.pagina-interna-totem
+.localizacao-item span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #7a8492;
+
+  font-size: 11px;
+}
+
+
+body.pagina-interna-totem
+.localizacao-item strong {
+  color: #112a4b !important;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   BOTÃO MAPA
+========================================================= */
+
+body.pagina-interna-totem
+.botao-mapa {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 46px;
+
+  margin-top: 18px;
+
+  padding: 0 20px;
+
+  background: #112a4b !important;
+
+  border: none;
+
+  border-radius: 9px;
+
+  color: #ffffff !important;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+body.pagina-interna-totem
+.botao-mapa:hover {
+  background: #18395f !important;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   RESULTADOS DA PESQUISA - NOVA IDENTIDADE
+========================================================= */
+
+body.pagina-home-totem
+#resultados {
+  width: 100%;
+  margin-top: 28px;
+}
+
+
+/* TÍTULO: "X produtos encontrados" */
+
+body.pagina-home-totem
+.titulo-resultados {
+  margin-bottom: 18px;
+
+  color: #112a4b;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* GRID DOS PRODUTOS */
+
+body.pagina-home-totem
+.lista-produtos {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(300px, 1fr)
+    );
+
+  gap: 18px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+/* cobre a versão atual e uma classe antiga,
+   caso ainda exista algum card com .card */
+
+body.pagina-home-totem
+.card-produto,
+
+body.pagina-home-totem
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 265px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 14px
+    rgba(17, 42, 75, 0.05);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+
+
+/* pequeno detalhe laranja */
+
+body.pagina-home-totem
+.card-produto::before,
+
+body.pagina-home-totem
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background: #f47a1f;
+}
+
+
+body.pagina-home-totem
+.card-produto:hover,
+
+body.pagina-home-totem
+.card:hover {
+  transform: translateY(-2px);
+
+  border-color: #cbd5e1;
+
+  box-shadow:
+    0 8px 22px
+    rgba(17, 42, 75, 0.09);
+}
+
+
+/* =========================================================
+   TOPO DO CARD
+========================================================= */
+
+body.pagina-home-totem
+.card-topo,
+
+body.pagina-home-totem
+.produto-topo {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 16px;
+}
+
+
+/* NOME */
+
+body.pagina-home-totem
+.nome-produto {
+  color: #112a4b;
+
+  font-size: 19px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+/* MARCA */
+
+body.pagina-home-totem
+.marca-produto,
+
+body.pagina-home-totem
+.marca {
+  margin-top: 5px;
+
+  color: #667085;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+body.pagina-home-totem
+.status-disponivel,
+
+body.pagina-home-totem
+.status.disponivel {
+  flex-shrink: 0;
+
+  padding: 5px 9px;
+
+  background: #dcfce7;
+
+  color: #166534;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+body.pagina-home-totem
+.status-indisponivel,
+
+body.pagina-home-totem
+.status.indisponivel {
+  flex-shrink: 0;
+
+  padding: 5px 9px;
+
+  background: #fee2e2;
+
+  color: #991b1b;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PREÇO
+========================================================= */
+
+body.pagina-home-totem
+.card-produto .preco,
+
+body.pagina-home-totem
+.card .preco {
+  margin-top: 18px;
+
+  color: #112a4b;
+
+  font-size: 25px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   DESCRIÇÃO
+========================================================= */
+
+body.pagina-home-totem
+.descricao-produto {
+  margin-top: 8px;
+
+  color: #667085;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   SEÇÃO / LOCALIZAÇÃO RESUMIDA
+========================================================= */
+
+body.pagina-home-totem
+.localizacao-resumo,
+
+body.pagina-home-totem
+.secao-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 18px;
+
+  padding: 11px 12px;
+
+  background: #f6faf7;
+
+  border: 1px solid #dce9e0;
+
+  border-radius: 9px;
+
+  color: #475467;
+
+  font-size: 13px;
+}
+
+
+body.pagina-home-totem
+.localizacao-resumo svg,
+
+body.pagina-home-totem
+.icone-secao {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+
+  color: #166534;
+}
+
+
+body.pagina-home-totem
+.localizacao-resumo strong,
+
+body.pagina-home-totem
+.secao-card strong {
+  color: #112a4b;
+}
+
+
+/* =========================================================
+   VER DETALHES
+========================================================= */
+
+body.pagina-home-totem
+.botao-detalhes {
+  min-height: 42px;
+
+  margin-top: auto;
+  padding: 0 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  background: #112a4b;
+
+  border: none;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+body.pagina-home-totem
+.botao-detalhes:hover {
+  background: #18395f;
+}
+
+
+body.pagina-home-totem
+.botao-detalhes svg {
+  width: 17px;
+  height: 17px;
+
+  transition: transform 0.2s;
+}
+
+
+body.pagina-home-totem
+.botao-detalhes:hover svg {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   MODO ESCURO
+========================================================= */
+
+body.pagina-home-totem.modo-escuro
+.titulo-resultados {
+  color: #ffffff;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.card-produto,
+
+body.pagina-home-totem.modo-escuro
+.card {
+  background: #152238;
+
+  border-color: #34445c;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.nome-produto,
+
+body.pagina-home-totem.modo-escuro
+.card-produto .preco,
+
+body.pagina-home-totem.modo-escuro
+.card .preco {
+  color: #ffffff;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.marca-produto,
+
+body.pagina-home-totem.modo-escuro
+.descricao-produto,
+
+body.pagina-home-totem.modo-escuro
+.marca {
+  color: #cbd5e1;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.localizacao-resumo,
+
+body.pagina-home-totem.modo-escuro
+.secao-card {
+  background: #173225;
+
+  border-color: #337052;
+
+  color: #d1fae5;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.localizacao-resumo strong,
+
+body.pagina-home-totem.modo-escuro
+.secao-card strong {
+  color: #ffffff;
+}
+
+/* =========================================================
+   MODO ESCURO - RESULTADOS + DETALHES DO PRODUTO
+========================================================= */
+
+
+/* =========================
+   RESULTADOS DA PESQUISA
+========================= */
+
+body.pagina-home-totem.modo-escuro
+.titulo-resultados,
+
+body.pagina-home-totem.modo-escuro
+.produtos-setor-cabecalho h3 {
+  color: #ffffff !important;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.produtos-setor-cabecalho span {
+  color: #6ee7a5 !important;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.produtos-setor-cabecalho p {
+  color: #cbd5e1 !important;
+}
+
+
+/* CARD */
+
+body.pagina-home-totem.modo-escuro
+.card-produto,
+
+body.pagina-home-totem.modo-escuro
+.card {
+  background: #16283f !important;
+
+  border-color: #35506d !important;
+
+  box-shadow:
+    0 5px 18px
+    rgba(0, 0, 0, 0.18) !important;
+}
+
+
+/* NOME */
+
+body.pagina-home-totem.modo-escuro
+.nome-produto {
+  color: #ffffff !important;
+}
+
+
+/* MARCA */
+
+body.pagina-home-totem.modo-escuro
+.marca-produto,
+
+body.pagina-home-totem.modo-escuro
+.marca {
+  color: #cbd5e1 !important;
+}
+
+
+/* PREÇO */
+
+body.pagina-home-totem.modo-escuro
+.card-produto .preco,
+
+body.pagina-home-totem.modo-escuro
+.card .preco {
+  color: #6ee7a5 !important;
+}
+
+
+/* DESCRIÇÃO */
+
+body.pagina-home-totem.modo-escuro
+.descricao-produto {
+  color: #d6deea !important;
+}
+
+
+/* LOCALIZAÇÃO RESUMIDA */
+
+body.pagina-home-totem.modo-escuro
+.localizacao-resumo,
+
+body.pagina-home-totem.modo-escuro
+.secao-card {
+  background: #102b25 !important;
+
+  border-color: #2f6555 !important;
+
+  color: #d1fae5 !important;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.localizacao-resumo strong,
+
+body.pagina-home-totem.modo-escuro
+.secao-card strong {
+  color: #ffffff !important;
+}
+
+
+/* BOTÃO */
+
+body.pagina-home-totem.modo-escuro
+.botao-detalhes {
+  background: #173a64 !important;
+
+  color: #ffffff !important;
+}
+
+
+body.pagina-home-totem.modo-escuro
+.botao-detalhes:hover {
+  background: #214f83 !important;
+}
+
+
+/* =========================
+   TELA DE DETALHES
+========================= */
+
+body.pagina-interna-totem.modo-escuro {
+  background: #0d1728 !important;
+
+  color: #ffffff;
+}
+
+
+/* VOLTAR */
+
+body.pagina-interna-totem.modo-escuro
+.voltar {
+  color: #f59a57 !important;
+}
+
+
+/* CARD PRINCIPAL */
+
+body.pagina-interna-totem.modo-escuro
+.produto-detalhe-card {
+  background: #16283f !important;
+
+  border-color: #35506d !important;
+
+  color: #ffffff !important;
+}
+
+
+/* CATEGORIA */
+
+body.pagina-interna-totem.modo-escuro
+.produto-categoria {
+  color: #ff9b52 !important;
+}
+
+
+/* NOME */
+
+body.pagina-interna-totem.modo-escuro
+.produto-detalhe-topo h1 {
+  color: #ffffff !important;
+}
+
+
+/* MARCA */
+
+body.pagina-interna-totem.modo-escuro
+.produto-marca {
+  color: #cbd5e1 !important;
+}
+
+
+/* PREÇO */
+
+body.pagina-interna-totem.modo-escuro
+.produto-detalhe-preco {
+  color: #6ee7a5 !important;
+}
+
+
+/* DESCRIÇÃO */
+
+body.pagina-interna-totem.modo-escuro
+.produto-detalhe-descricao {
+  color: #d6deea !important;
+}
+
+
+/* ONDE ENCONTRAR */
+
+body.pagina-interna-totem.modo-escuro
+.produto-localizacao {
+  background: #102b25 !important;
+
+  border-color: #2f6555 !important;
+}
+
+
+body.pagina-interna-totem.modo-escuro
+.produto-localizacao h2 {
+  color: #ffffff !important;
+}
+
+
+/* CORREDOR / SEÇÃO / PRATELEIRA */
+
+body.pagina-interna-totem.modo-escuro
+.localizacao-item {
+  background: #17243a !important;
+
+  border-color: #405470 !important;
+}
+
+
+body.pagina-interna-totem.modo-escuro
+.localizacao-item span {
+  color: #9fb0c7 !important;
+}
+
+
+body.pagina-interna-totem.modo-escuro
+.localizacao-item strong {
+  color: #ffffff !important;
+}
+
+
+/* BOTÃO MAPA */
+
+body.pagina-interna-totem.modo-escuro
+.botao-mapa {
+  background: #173a64 !important;
+
+  color: #ffffff !important;
+}
+
+
+body.pagina-interna-totem.modo-escuro
+.botao-mapa:hover {
+  background: #214f83 !important;
+}
+
+
+/* STATUS DISPONÍVEL */
+
+body.pagina-interna-totem.modo-escuro
+.status-disponivel,
+
+body.pagina-home-totem.modo-escuro
+.status-disponivel,
+
+body.pagina-home-totem.modo-escuro
+.status.disponivel {
+  background: #d1fae5 !important;
+
+  color: #065f46 !important;
+}
+
+/* =========================================================
+   RECEITA - NOVA IDENTIDADE
+========================================================= */
+
+.receita-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 34px 38px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(17, 42, 75, 0.05);
+
+  overflow: hidden;
+}
+
+
+/* DETALHE LARANJA */
+
+.receita-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background: #f47a1f;
+}
+
+
+/* ETIQUETA */
+
+.receita-etiqueta {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #d85f0d !important;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+
+/* TÍTULO */
+
+.receita-card h1 {
+  margin: 0 0 10px;
+
+  color: #112a4b !important;
+
+  font-size: 32px;
+
+  line-height: 1.15;
+}
+
+
+/* DESCRIÇÃO */
+
+.receita-descricao {
+  max-width: 800px;
+
+  color: #667085 !important;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   TEMPO / RENDIMENTO
+========================================================= */
+
+.receita-resumo {
+  display: flex;
+
+  gap: 14px;
+
+  margin-top: 25px;
+}
+
+
+.receita-info {
+  min-width: 150px;
+
+  padding: 13px 16px;
+
+  background: #f6faf7 !important;
+
+  border: 1px solid #d9eadf;
+
+  border-radius: 10px;
+}
+
+
+.receita-info span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #77808d !important;
+
+  font-size: 11px;
+}
+
+
+.receita-info strong {
+  color: #166534 !important;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   INGREDIENTES + MODO DE PREPARO
+========================================================= */
+
+.receita-conteudo {
+  display: grid;
+
+  grid-template-columns:
+    0.8fr 1.2fr;
+
+  gap: 55px;
+
+  margin-top: 35px;
+
+  padding-top: 28px;
+
+  border-top: 1px solid #e4e9ef;
+}
+
+
+.receita-conteudo h2 {
+  margin: 0 0 18px;
+
+  color: #112a4b !important;
+
+  font-size: 20px;
+}
+
+
+/* INGREDIENTES */
+
+.lista-ingredientes {
+  margin: 0;
+
+  padding-left: 20px;
+}
+
+
+.lista-ingredientes li {
+  margin-bottom: 10px;
+
+  color: #475467 !important;
+
+  line-height: 1.5;
+}
+
+
+/* MODO DE PREPARO */
+
+.lista-preparo {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.lista-preparo li {
+  margin-bottom: 16px;
+
+  color: #475467 !important;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   VOLTAR
+========================================================= */
+
+.receita-card ~ * {
+  box-sizing: border-box;
+}
+
+.voltar-receita,
+.receita-voltar,
+body .voltar {
+  color: #112a4b;
+}
+
+
+/* =========================================================
+   MODO ESCURO
+========================================================= */
+
+body.modo-escuro .receita-card {
+  background: #16283f !important;
+
+  border-color: #35506d !important;
+
+  box-shadow:
+    0 5px 18px
+    rgba(0, 0, 0, 0.18) !important;
+}
+
+
+body.modo-escuro
+.receita-etiqueta {
+  color: #ff9b52 !important;
+}
+
+
+body.modo-escuro
+.receita-card h1 {
+  color: #ffffff !important;
+}
+
+
+body.modo-escuro
+.receita-descricao {
+  color: #d6deea !important;
+}
+
+
+body.modo-escuro
+.receita-info {
+  background: #102b25 !important;
+
+  border-color: #2f6555 !important;
+}
+
+
+body.modo-escuro
+.receita-info span {
+  color: #9fb0c7 !important;
+}
+
+
+body.modo-escuro
+.receita-info strong {
+  color: #6ee7a5 !important;
+}
+
+
+body.modo-escuro
+.receita-conteudo {
+  border-color: #34445c !important;
+}
+
+
+body.modo-escuro
+.receita-conteudo h2 {
+  color: #ffffff !important;
+}
+
+
+body.modo-escuro
+.lista-ingredientes li,
+
+body.modo-escuro
+.lista-preparo li {
+  color: #e2e8f0 !important;
+}
+
+
+body.modo-escuro
+.voltar-receita,
+
+body.modo-escuro
+.receita-voltar,
+
+body.modo-escuro
+.voltar {
+  color: #f59a57 !important;
+}
+
+/* =========================================================
+   TELA DE ROTA - NOVA IDENTIDADE
+========================================================= */
+
+body.pagina-mapa-totem
+.mapa-pagina {
+  width: 100%;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(17, 42, 75, 0.05);
+}
+
+
+/* CABEÇALHO DA ÁREA */
+
+body.pagina-mapa-totem
+.mapa-pagina-cabecalho {
+  margin-bottom: 22px;
+}
+
+
+body.pagina-mapa-totem
+.mapa-etiqueta {
+  color: #f47a1f !important;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+}
+
+
+body.pagina-mapa-totem
+.mapa-pagina h2 {
+  margin: 5px 0 5px;
+
+  color: #112a4b !important;
+
+  font-size: 28px;
+}
+
+
+body.pagina-mapa-totem
+.mapa-pagina-cabecalho p {
+  margin: 0;
+
+  color: #667085;
+}
+
+
+/* =========================================================
+   MAPA + PAINEL
+========================================================= */
+
+body.pagina-mapa-totem
+.rota-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.7fr)
+    minmax(320px, 0.7fr);
+
+  gap: 22px;
+
+  align-items: start;
+}
+
+
+/* MAPA */
+
+body.pagina-mapa-totem
+.mapa-produto-wrapper {
+  width: 100%;
+
+  max-width: none;
+
+  margin: 0;
+
+  padding: 12px;
+
+  background: #f8fafc;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 13px;
+}
+
+
+body.pagina-mapa-totem
+#mapaProduto svg {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+}
+
+
+/* =========================================================
+   PAINEL LATERAL
+========================================================= */
+
+body.pagina-mapa-totem
+.rota-painel {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+/* TOTEM */
+
+body.pagina-mapa-totem
+.escolha-totem {
+  width: 100%;
+
+  max-width: none;
+
+  margin: 0;
+
+  padding: 20px;
+
+  background: #f8fafc;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 13px;
+}
+
+
+body.pagina-mapa-totem
+.escolha-totem h3 {
+  margin: 5px 0 6px;
+
+  color: #112a4b;
+
+  font-size: 20px;
+}
+
+
+body.pagina-mapa-totem
+.escolha-totem p {
+  margin: 0 0 16px;
+
+  color: #667085;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+
+/* BOTÕES T1-T5 */
+
+body.pagina-mapa-totem
+.botoes-totem {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 7px;
+}
+
+
+body.pagina-mapa-totem
+.botao-totem {
+  min-width: 0;
+
+  min-height: 44px;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #166534;
+
+  border-radius: 8px;
+
+  color: #166534;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+body.pagina-mapa-totem
+.botao-totem:hover {
+  background: #f0fdf4;
+
+  transform: none;
+}
+
+
+/* TOTEM ATUAL */
+
+body.pagina-mapa-totem
+.botao-totem.ativo {
+  background: #166534;
+
+  border-color: #166534;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 3px 10px
+    rgba(22, 101, 52, 0.18);
+}
+
+
+/* =========================================================
+   INSTRUÇÕES
+========================================================= */
+
+body.pagina-mapa-totem
+.instrucao-rota {
+  margin: 0;
+
+  padding: 20px;
+
+  background: #f6faf7;
+
+  border: 1px solid #d9eadf;
+
+  border-left: 4px solid #166534;
+
+  border-radius: 12px;
+
+  color: #344054;
+}
+
+
+body.pagina-mapa-totem
+.lista-passos-rota {
+  margin-top: 15px;
+
+  gap: 11px;
+}
+
+
+body.pagina-mapa-totem
+.passo-rota {
+  color: #344054;
+}
+
+
+body.pagina-mapa-totem
+.numero-passo {
+  background: #112a4b;
+}
+
+
+/* =========================================================
+   MODO ESCURO
+========================================================= */
+
+body.pagina-mapa-totem.modo-escuro
+.mapa-pagina {
+  background: #16283f !important;
+
+  border-color: #35506d !important;
+}
+
+
+body.pagina-mapa-totem.modo-escuro
+.mapa-pagina h2,
+
+body.pagina-mapa-totem.modo-escuro
+.escolha-totem h3 {
+  color: #ffffff !important;
+}
+
+
+body.pagina-mapa-totem.modo-escuro
+.mapa-pagina-cabecalho p,
+
+body.pagina-mapa-totem.modo-escuro
+.escolha-totem p {
+  color: #cbd5e1 !important;
+}
+
+
+body.pagina-mapa-totem.modo-escuro
+.mapa-produto-wrapper {
+  background: #101c2e !important;
+
+  border-color: #35506d !important;
+}
+
+
+body.pagina-mapa-totem.modo-escuro
+.escolha-totem {
+  background: #17243a !important;
+
+  border-color: #405470 !important;
+}
+
+
+body.pagina-mapa-totem.modo-escuro
+.botao-totem {
+  background: #16283f;
+
+  border-color: #4f8d69;
+
+  color: #86efac;
+}
+
+
+body.pagina-mapa-totem.modo-escuro
+.botao-totem.ativo {
+  background: #166534 !important;
+
+  color: #ffffff !important;
+}
+
+
+body.pagina-mapa-totem.modo-escuro
+.instrucao-rota {
+  background: #102b25 !important;
+
+  border-color: #2f6555 !important;
+
+  border-left-color: #6ee7a5 !important;
+
+  color: #e2e8f0 !important;
+}
+
+
+body.pagina-mapa-totem.modo-escuro
+.passo-rota {
+  color: #e2e8f0 !important;
+}
+
+/* =========================================================
+   IMAGEM DA RECEITA
+========================================================= */
+
+.receita-imagem-wrapper {
+  width: 100%;
+  height: 330px;
+
+  margin-top: 24px;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: #eef2f6;
+}
+
+
+.receita-imagem {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+
+  object-fit: cover;
+
+}
+
+
+body.modo-escuro
+.receita-imagem-wrapper {
+  background: #101c2e;
+
+  border: 1px solid #35506d;
+}
+
+
+@media (max-width: 700px) {
+
+  .receita-imagem-wrapper {
+    height: 220px;
+  }
+
+}
+
+/* =========================================================
+   RESPONSIVIDADE FINAL - ANHANVERA
+   NÃO ALTERA O DESKTOP
+========================================================= */
+
+
+/* =========================================================
+   TABLET / TELAS MENORES
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  /* -------------------------
+     CABEÇALHO
+  ------------------------- */
+
+  .cabecalho-conteudo {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+
+    gap: 18px !important;
+  }
+
+  .cabecalho-utilidades {
+    gap: 10px !important;
+  }
+
+  .info-data {
+    display: none !important;
+  }
+
+
+  /* -------------------------
+     HOME
+  ------------------------- */
+
+  body.pagina-home-totem
+  .home-grid-principal {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.pagina-home-totem
+  .home-coluna-direita {
+    display: grid !important;
+
+    grid-template-columns:
+      1fr 1fr !important;
+  }
+
+
+  /* -------------------------
+     ROTA
+  ------------------------- */
+
+  body.pagina-mapa-totem
+  .rota-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.pagina-mapa-totem
+  .rota-painel {
+    display: grid !important;
+
+    grid-template-columns:
+      1fr 1fr !important;
+  }
+
+
+  /* -------------------------
+     RECEITA
+  ------------------------- */
+
+  .receita-conteudo {
+    gap: 30px !important;
+  }
+
+}
+
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* =======================================================
+     GERAL
+  ======================================================= */
+
+  body {
+    overflow-x: hidden;
+  }
+
+  main,
+  body.pagina-interna-totem main,
+  body.pagina-home-totem main.home-totem {
+    width: 100% !important;
+
+    padding:
+      20px 14px
+      40px !important;
+  }
+
+
+  /* =======================================================
+     CABEÇALHO
+  ======================================================= */
+
+  .cabecalho {
+    min-height: auto !important;
+  }
+
+  .cabecalho-conteudo {
+    min-height: auto !important;
+
+    padding:
+      10px 12px !important;
+
+    gap: 10px !important;
+  }
+
+
+  /* LOGO */
+
+  .marca-anhanvera {
+    gap: 7px !important;
+  }
+
+  .marca-carrinho {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .marca-texto span {
+    font-size: 10px !important;
+  }
+
+  .marca-texto strong {
+    font-size: 20px !important;
+  }
+
+  .marca-texto i {
+    width: 60px !important;
+    height: 3px !important;
+  }
+
+
+  /* DATA */
+
+  .info-data {
+    display: none !important;
+  }
+
+
+  /* HORA */
+
+  .info-tempo {
+    display: none !important;
+  }
+
+
+  /* DIVISORES */
+
+  .divisor-topo {
+    display: none !important;
+  }
+
+
+  /* ACESSIBILIDADE */
+
+  .cabecalho-utilidades {
+    margin-left: auto !important;
+
+    gap: 5px !important;
+  }
+
+  .barra-acessibilidade {
+    gap: 4px !important;
+  }
+
+  .botao-acessibilidade,
+  .percentual-fonte {
+    min-width: 34px !important;
+    height: 34px !important;
+
+    padding:
+      0 7px !important;
+
+    font-size: 12px !important;
+  }
+
+
+  /* esconde o texto grande dos botões
+     se necessário */
+
+  .botao-acessibilidade {
+    white-space: nowrap;
+  }
+
+
+  /* =======================================================
+     HOME
+  ======================================================= */
+
+  body.pagina-home-totem
+  .home-intro {
+    margin-bottom: 18px !important;
+  }
+
+
+  body.pagina-home-totem
+  .home-intro h1 {
+    font-size: 25px !important;
+
+    line-height: 1.15 !important;
+  }
+
+
+  /* BUSCA */
+
+  body.pagina-home-totem
+  .painel-busca-home {
+    padding: 16px !important;
+
+    border-radius: 12px !important;
+  }
+
+
+  .filtros,
+  .area-busca {
+    flex-direction: column !important;
+  }
+
+
+  .grupo-categoria,
+  .campo-container {
+    width: 100% !important;
+  }
+
+
+  #campoBusca,
+  #categoria {
+    width: 100% !important;
+  }
+
+
+  .botao-pesquisar {
+    width: 100% !important;
+  }
+
+
+  /* MAPA HOME */
+
+  body.pagina-home-totem
+  .home-grid-principal {
+    display: block !important;
+  }
+
+
+  body.pagina-home-totem
+  .painel-mapa-home {
+    margin-bottom: 18px !important;
+  }
+
+
+  body.pagina-home-totem
+  .mapa-exploracao-wrapper {
+    overflow-x: auto;
+  }
+
+
+  /* COLUNA DIREITA */
+
+  body.pagina-home-totem
+  .home-coluna-direita {
+    display: flex !important;
+
+    flex-direction: column !important;
+  }
+
+
+  /* TOTENS */
+
+  body.pagina-home-totem
+  .grade-totens {
+    grid-template-columns:
+      repeat(5, 1fr) !important;
+
+    gap: 5px !important;
+  }
+
+
+  body.pagina-home-totem
+  .botao-totem-home {
+    min-height: 44px !important;
+
+    font-size: 16px !important;
+  }
+
+
+  /* =======================================================
+     RESULTADOS
+  ======================================================= */
+
+  .lista-produtos {
+    grid-template-columns:
+      1fr !important;
+
+    gap: 14px !important;
+  }
+
+
+  .card,
+  .card-produto {
+    min-height: auto !important;
+
+    padding: 18px !important;
+  }
+
+
+  .produto-topo,
+  .card-topo {
+    flex-direction: row !important;
+
+    align-items: flex-start !important;
+  }
+
+
+  .nome-produto {
+    font-size: 17px !important;
+  }
+
+
+  /* =======================================================
+     PRODUTO
+  ======================================================= */
+
+  .produto-detalhe-card {
+    padding:
+      24px 18px !important;
+  }
+
+
+  .produto-detalhe-topo {
+    flex-direction: column !important;
+  }
+
+
+  .produto-detalhe-topo h1 {
+    font-size: 25px !important;
+  }
+
+
+  .produto-detalhe-preco {
+    font-size: 27px !important;
+  }
+
+
+  .produto-localizacao {
+    padding: 18px !important;
+  }
+
+
+  .produto-localizacao-grid {
+    grid-template-columns:
+      1fr !important;
+  }
+
+
+  .botao-mapa {
+    width: 100% !important;
+  }
+
+
+  /* =======================================================
+     RECEITA
+  ======================================================= */
+
+  .receita-card {
+    padding:
+      24px 18px !important;
+
+    border-radius: 13px !important;
+  }
+
+
+  .receita-card h1 {
+    font-size: 25px !important;
+  }
+
+
+  .receita-descricao {
+    font-size: 14px !important;
+  }
+
+
+  .receita-imagem-wrapper {
+    height: 220px !important;
+
+    margin-top: 18px !important;
+  }
+
+
+  .receita-imagem {
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    object-fit: cover;
+  }
+
+
+  .receita-resumo {
+    display: grid !important;
+
+    grid-template-columns:
+      1fr 1fr !important;
+
+    gap: 10px !important;
+
+    margin-top: 18px !important;
+  }
+
+
+  .receita-info {
+    min-width: 0 !important;
+
+    padding: 11px 12px !important;
+  }
+
+
+  .receita-conteudo {
+    grid-template-columns:
+      1fr !important;
+
+    gap: 28px !important;
+
+    margin-top: 25px !important;
+
+    padding-top: 22px !important;
+  }
+
+
+  body.pagina-mapa-totem
+  .mapa-pagina {
+    padding:
+      20px 14px !important;
+  }
+
+
+  body.pagina-mapa-totem
+  .mapa-pagina h2 {
+    font-size: 24px !important;
+  }
+
+
+  body.pagina-mapa-totem
+  .rota-layout {
+    display: flex !important;
+
+    flex-direction: column !important;
+  }
+
+
+  body.pagina-mapa-totem
+  .rota-mapa-coluna {
+    width: 100% !important;
+  }
+
+
+  body.pagina-mapa-totem
+  .mapa-produto-wrapper {
+    width: 100% !important;
+
+    overflow-x: auto;
+  }
+
+
+  body.pagina-mapa-totem
+  #mapaProduto {
+    width: 100% !important;
+  }
+
+
+  body.pagina-mapa-totem
+  #mapaProduto svg {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    height: auto !important;
+  }
+
+
+
+
+  body.pagina-mapa-totem
+  .rota-painel {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    width: 100% !important;
+  }
+
+
+  body.pagina-mapa-totem
+  .escolha-totem {
+    padding: 17px !important;
+  }
+
+
+  body.pagina-mapa-totem
+  .botoes-totem {
+    grid-template-columns:
+      repeat(5, 1fr) !important;
+  }
+
+
+  body.pagina-mapa-totem
+  .botao-totem {
+    min-height: 42px !important;
+
+    font-size: 13px !important;
+  }
+
+
+  body.pagina-mapa-totem
+  .instrucao-rota {
+    padding: 17px !important;
+  }
+
+
+
+  .voltar {
+    margin-bottom: 17px !important;
+
+    font-size: 14px !important;
+  }
+
+
+  
+  footer {
+    padding:
+      18px 12px !important;
+
+    text-align: center;
+
+    font-size: 12px !important;
+  }
+
+}
+
+/* =========================================================
+   HOME MOBILE - CABEÇALHO DEFINITIVO
+========================================================= */
+
+@media (max-width: 700px) {
+
+  body.pagina-home-totem
+  .cabecalho {
+    min-height: 0 !important;
+    height: auto !important;
+
+    padding: 0 !important;
+  }
+
+
+  body.pagina-home-totem
+  .cabecalho-conteudo {
+    width: 100% !important;
+    min-height: 0 !important;
+
+    padding: 11px 12px 12px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    gap: 10px !important;
+  }
+
+
+  /* =========================
+     LOGO
+  ========================= */
+
+  body.pagina-home-totem
+  .marca-anhanvera {
+    margin: 0 auto !important;
+
+    align-self: center !important;
+  }
+
+
+  body.pagina-home-totem
+  .marca-carrinho {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+
+  body.pagina-home-totem
+  .marca-texto span {
+    font-size: 9px !important;
+  }
+
+
+  body.pagina-home-totem
+  .marca-texto strong {
+    font-size: 22px !important;
+  }
+
+
+  body.pagina-home-totem
+  .marca-texto i {
+    width: 65px !important;
+
+    margin-top: 4px !important;
+  }
+
+
+  /* =========================
+     REMOVE DATA E HORA
+  ========================= */
+
+  body.pagina-home-totem
+  .info-tempo,
+
+  body.pagina-home-totem
+  .divisor-topo {
+    display: none !important;
+  }
+
+
+  /* =========================
+     ACESSIBILIDADE
+  ========================= */
+
+  body.pagina-home-totem
+  .cabecalho-utilidades {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    display: block !important;
+  }
+
+
+  body.pagina-home-totem
+  .acessibilidade-slot {
+    width: 100% !important;
+  }
+
+
+  body.pagina-home-totem
+  .barra-acessibilidade {
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-wrap: wrap !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 6px !important;
+
+    background: transparent !important;
+  }
+
+
+  /* A- / % / A+ */
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(1),
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(2),
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(3) {
+    flex: 0 0 44px !important;
+
+    width: 44px !important;
+    min-width: 44px !important;
+
+    height: 36px !important;
+
+    padding: 0 !important;
+  }
+
+
+  /* MODO ESCURO + ACESSO POR VOZ */
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(4),
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(5) {
+    flex: 0 0 calc(50% - 9px) !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+
+    height: 38px !important;
+
+    padding: 0 8px !important;
+
+    font-size: 11px !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  body.pagina-home-totem
+  .barra-acessibilidade svg {
+    width: 15px !important;
+    height: 15px !important;
+
+    flex-shrink: 0 !important;
+  }
+
+
+  /* =========================
+     COMEÇO DA HOME
+  ========================= */
+
+  body.pagina-home-totem
+  main.home-totem {
+    padding:
+      14px 10px
+      35px !important;
+  }
+
+}
+
+/* =========================================================
+   HOME MOBILE - ORGANIZAÇÃO DOS BOTÕES
+========================================================= */
+
+@media (max-width: 700px) {
+
+  body.pagina-home-totem
+  .barra-acessibilidade {
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(6, 1fr) !important;
+
+    gap: 6px !important;
+
+    width: 100% !important;
+    max-width: 300px !important;
+
+    margin: 0 auto !important;
+  }
+
+
+  /* A- */
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(1) {
+    grid-column: 1 / 3 !important;
+
+    width: 100% !important;
+  }
+
+
+  /* 90% */
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(2) {
+    grid-column: 3 / 5 !important;
+
+    width: 100% !important;
+  }
+
+
+  /* A+ */
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(3) {
+    grid-column: 5 / 7 !important;
+
+    width: 100% !important;
+  }
+
+
+  /* MODO ESCURO */
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(4) {
+    grid-column: 1 / 4 !important;
+
+    width: 100% !important;
+  }
+
+
+  /* ACESSO POR VOZ */
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(5) {
+    grid-column: 4 / 7 !important;
+
+    width: 100% !important;
+  }
+
+}
+
+/* =========================================================
+   PRODUTO - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* =====================================================
+     CABEÇALHO
+  ===================================================== */
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .cabecalho {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .cabecalho-conteudo {
+    width: 100% !important;
+    min-height: 0 !important;
+
+    padding: 11px 12px 12px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    gap: 10px !important;
+  }
+
+
+  /* LOGO */
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .marca-anhanvera {
+    margin: 0 auto !important;
+    align-self: center !important;
+  }
+
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .marca-carrinho {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .marca-texto span {
+    font-size: 9px !important;
+  }
+
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .marca-texto strong {
+    font-size: 22px !important;
+  }
+
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .marca-texto i {
+    width: 65px !important;
+    margin-top: 4px !important;
+  }
+
+
+  /* REMOVE DATA E HORA */
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .info-tempo,
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .divisor-topo {
+    display: none !important;
+  }
+
+
+  /* ACESSIBILIDADE */
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .cabecalho-utilidades {
+    width: 100% !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .acessibilidade-slot {
+    width: 100% !important;
+  }
+
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .barra-acessibilidade {
+    width: 100% !important;
+    max-width: 300px !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(6, 1fr) !important;
+
+    gap: 6px !important;
+
+    background: transparent !important;
+  }
+
+
+  /* A- */
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .barra-acessibilidade > :nth-child(1) {
+    grid-column: 1 / 3 !important;
+  }
+
+
+  /* % */
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .barra-acessibilidade > :nth-child(2) {
+    grid-column: 3 / 5 !important;
+  }
+
+
+  /* A+ */
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .barra-acessibilidade > :nth-child(3) {
+    grid-column: 5 / 7 !important;
+  }
+
+
+  /* MODO ESCURO */
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .barra-acessibilidade > :nth-child(4) {
+    grid-column: 1 / 4 !important;
+  }
+
+
+  /* VOZ */
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .barra-acessibilidade > :nth-child(5) {
+    grid-column: 4 / 7 !important;
+  }
+
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .barra-acessibilidade > * {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    height: 38px !important;
+
+    padding: 0 7px !important;
+
+    font-size: 11px !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* =====================================================
+     CONTEÚDO
+  ===================================================== */
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  main {
+    padding:
+      16px 12px
+      35px !important;
+  }
+
+
+  body.pagina-interna-totem:not(.pagina-receita-totem):not(.pagina-mapa-totem)
+  .voltar {
+    margin-bottom: 14px !important;
+  }
+
+
+  /* =====================================================
+     CARD DO PRODUTO
+  ===================================================== */
+
+  .produto-detalhe-card {
+    padding:
+      22px 14px !important;
+
+    border-radius: 14px !important;
+  }
+
+
+  .produto-detalhe-card h1 {
+    font-size: 24px !important;
+    line-height: 1.15 !important;
+  }
+
+
+  .produto-detalhe-preco {
+    margin-top: 24px !important;
+
+    font-size: 25px !important;
+  }
+
+
+  .produto-localizacao {
+    margin-top: 24px !important;
+
+    padding: 16px !important;
+
+    border-radius: 12px !important;
+  }
+
+
+  .produto-localizacao h2 {
+    font-size: 18px !important;
+  }
+
+
+  .produto-localizacao-grid {
+    grid-template-columns: 1fr !important;
+
+    gap: 10px !important;
+  }
+
+
+  .localizacao-item {
+    min-height: 0 !important;
+
+    padding: 11px 12px !important;
+  }
+
+
+  .botao-mapa {
+    width: 100% !important;
+
+    min-height: 46px !important;
+  }
+
+}
+
+/* =========================================================
+   TELAS INTERNAS - CABEÇALHO MOBILE PADRÃO
+   PRODUTO / RECEITA / LOCALIZAÇÃO
+========================================================= */
+
+@media (max-width: 700px) {
+
+  body.pagina-interna-totem .cabecalho {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+
+  body.pagina-interna-totem
+  .cabecalho-conteudo {
+    width: 100% !important;
+    min-height: 0 !important;
+
+    padding: 11px 12px 12px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    gap: 10px !important;
+  }
+
+
+  /* =========================
+     LOGO
+  ========================= */
+
+  body.pagina-interna-totem
+  .marca-anhanvera {
+    margin: 0 auto !important;
+    align-self: center !important;
+  }
+
+
+  body.pagina-interna-totem
+  .marca-carrinho {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+
+  body.pagina-interna-totem
+  .marca-texto span {
+    font-size: 9px !important;
+  }
+
+
+  body.pagina-interna-totem
+  .marca-texto strong {
+    font-size: 22px !important;
+  }
+
+
+  body.pagina-interna-totem
+  .marca-texto i {
+    width: 65px !important;
+    margin-top: 4px !important;
+  }
+
+
+  /* =========================
+     ESCONDE DATA E HORA
+  ========================= */
+
+  body.pagina-interna-totem
+  .info-tempo,
+
+  body.pagina-interna-totem
+  .divisor-topo {
+    display: none !important;
+  }
+
+
+  /* =========================
+     ACESSIBILIDADE
+  ========================= */
+
+  body.pagina-interna-totem
+  .cabecalho-utilidades {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    display: block !important;
+  }
+
+
+  body.pagina-interna-totem
+  .acessibilidade-slot {
+    width: 100% !important;
+  }
+
+
+  body.pagina-interna-totem
+  .barra-acessibilidade {
+    width: 100% !important;
+    max-width: 300px !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(6, 1fr) !important;
+
+    gap: 6px !important;
+
+    background: transparent !important;
+  }
+
+
+  /* A- */
+
+  body.pagina-interna-totem
+  .barra-acessibilidade
+  > :nth-child(1) {
+    grid-column: 1 / 3 !important;
+  }
+
+
+  /* % */
+
+  body.pagina-interna-totem
+  .barra-acessibilidade
+  > :nth-child(2) {
+    grid-column: 3 / 5 !important;
+  }
+
+
+  /* A+ */
+
+  body.pagina-interna-totem
+  .barra-acessibilidade
+  > :nth-child(3) {
+    grid-column: 5 / 7 !important;
+  }
+
+
+  /* MODO ESCURO */
+
+  body.pagina-interna-totem
+  .barra-acessibilidade
+  > :nth-child(4) {
+    grid-column: 1 / 4 !important;
+  }
+
+
+  /* ACESSO POR VOZ */
+
+  body.pagina-interna-totem
+  .barra-acessibilidade
+  > :nth-child(5) {
+    grid-column: 4 / 7 !important;
+  }
+
+
+  body.pagina-interna-totem
+  .barra-acessibilidade > * {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    height: 38px !important;
+
+    padding: 0 7px !important;
+
+    font-size: 11px !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* =========================
+     CONTEÚDO
+  ========================= */
+
+  body.pagina-interna-totem main {
+    padding:
+      16px 12px
+      35px !important;
+  }
+
+
+  body.pagina-interna-totem
+  .voltar {
+    margin-bottom: 14px !important;
+  }
+
+}
+
+/* =========================================================
+   HOME MOBILE - BORDA NOS BOTÕES GRANDES
+========================================================= */
+
+@media (max-width: 700px) {
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(4),
+
+  body.pagina-home-totem
+  .barra-acessibilidade
+  > :nth-child(5) {
+
+    border:
+      1px solid
+      rgba(255, 255, 255, 0.35) !important;
+
+    border-radius: 8px !important;
+
+    background: transparent !important;
+
+    height: 38px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 5px !important;
+
+    padding: 0 8px !important;
+
+  }
+
+}

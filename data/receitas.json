@@ -1,0 +1,1260 @@
+[
+  {
+    "id": "R001",
+    "nome": "Arroz carreteiro",
+    "descricao": "Arroz bem temperado com carne, prático para uma refeição completa.",
+    "ingredientes": [
+      "arroz branco",
+      "carne bovina em cubos",
+      "cebola",
+      "alho",
+      "tomate",
+      "cheiro-verde",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Doure a carne com cebola e alho",
+      "Pique e junte tomate, acrescente o arroz e água quente",
+      "Cozinhe até secar e finalize com cheiro-verde"
+    ],
+    "tempo": "40 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R001.webp"
+  },
+  {
+    "id": "R002",
+    "nome": "Arroz integral com legumes",
+    "descricao": "Arroz integral preparado com legumes refogados.",
+    "ingredientes": [
+      "arroz integral",
+      "cenoura",
+      "abobrinha",
+      "cebola",
+      "alho",
+      "azeite",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Refogue cebola e alho, junte os legumes e o arroz",
+      "Acrescente água quente e cozinhe em fogo baixo até ficar macio"
+    ],
+    "tempo": "45 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R002.webp"
+  },
+  {
+    "id": "R003",
+    "nome": "Feijão tropeiro",
+    "descricao": "Feijão carioca com farofa, ovos e temperos.",
+    "ingredientes": [
+      "feijão carioca cozido",
+      "farinha de mandioca",
+      "ovos",
+      "cebola",
+      "alho",
+      "cheiro-verde"
+    ],
+    "modo_preparo": [
+      "Refogue cebola e alho, junte o feijão escorrido e os ovos mexidos",
+      "Acrescente a farinha aos poucos e finalize com cheiro-verde"
+    ],
+    "tempo": "30 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R003.webp"
+  },
+  {
+    "id": "R004",
+    "nome": "Feijoada simples",
+    "descricao": "Feijão preto com bacon e linguiça calabresa.",
+    "ingredientes": [
+      "feijão preto",
+      "bacon",
+      "linguiça calabresa",
+      "cebola",
+      "alho",
+      "louro",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Cozinhe o feijão",
+      "Doure bacon e linguiça, refogue cebola e alho e misture ao feijão",
+      "Cozinhe até o caldo encorpar"
+    ],
+    "tempo": "1 h 20 min",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R004.webp"
+  },
+  {
+    "id": "R005",
+    "nome": "Bolo simples",
+    "descricao": "Bolo caseiro básico e macio.",
+    "ingredientes": [
+      "farinha de trigo",
+      "ovos",
+      "açúcar",
+      "leite",
+      "manteiga ou margarina",
+      "fermento"
+    ],
+    "modo_preparo": [
+      "Bata ovos, açúcar e manteiga",
+      "Junte leite e farinha, misture o fermento e asse em forma untada até dourar"
+    ],
+    "tempo": "45 min",
+    "rendimento": "10 porções",
+    "imagem": "assets/receitas/R005.webp"
+  },
+  {
+    "id": "R006",
+    "nome": "Farofa temperada",
+    "descricao": "Farofa de mandioca com cebola e temperos.",
+    "ingredientes": [
+      "farinha de mandioca",
+      "cebola",
+      "manteiga",
+      "alho",
+      "cheiro-verde",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Doure cebola e alho na manteiga",
+      "Acrescente a farinha aos poucos, mexendo até ficar levemente tostada",
+      "Finalize com cheiro-verde"
+    ],
+    "tempo": "20 min",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R006.webp"
+  },
+  {
+    "id": "R007",
+    "nome": "Cuscuz com ovos",
+    "descricao": "Cuscuz de milho servido com ovos.",
+    "ingredientes": [
+      "flocão de milho",
+      "água",
+      "sal",
+      "ovos",
+      "manteiga"
+    ],
+    "modo_preparo": [
+      "Hidrate o flocão com água e sal",
+      "Cozinhe na cuscuzeira e sirva com ovos preparados na frigideira"
+    ],
+    "tempo": "20 min",
+    "rendimento": "2 porções",
+    "imagem": "assets/receitas/R007.webp"
+  },
+  {
+    "id": "R008",
+    "nome": "Tapioca com queijo",
+    "descricao": "Tapioca simples recheada com queijo derretido.",
+    "ingredientes": [
+      "goma de tapioca",
+      "queijo muçarela"
+    ],
+    "modo_preparo": [
+      "Espalhe a goma em frigideira quente",
+      "Quando firmar, coloque o queijo, dobre ao meio e aqueça até derreter"
+    ],
+    "tempo": "10 min",
+    "rendimento": "1 porção",
+    "imagem": "assets/receitas/R008.webp"
+  },
+  {
+    "id": "R009",
+    "nome": "Macarrão à bolonhesa",
+    "descricao": "Massa com molho de tomate e carne moída.",
+    "ingredientes": [
+      "macarrão",
+      "carne moída",
+      "molho de tomate",
+      "cebola",
+      "alho",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Cozinhe o macarrão",
+      "Refogue a carne com cebola e alho, acrescente o molho e cozinhe por alguns minutos",
+      "Sirva sobre a massa"
+    ],
+    "tempo": "35 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R009.webp"
+  },
+  {
+    "id": "R010",
+    "nome": "Creme de milho",
+    "descricao": "Creme salgado de milho, cremoso e fácil.",
+    "ingredientes": [
+      "milho-verde",
+      "leite",
+      "creme de leite",
+      "cebola",
+      "manteiga",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Bata parte do milho com leite",
+      "Refogue cebola na manteiga, junte o creme batido e o restante do milho",
+      "Finalize com creme de leite"
+    ],
+    "tempo": "25 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R010.webp"
+  },
+  {
+    "id": "R011",
+    "nome": "Torta salgada de ervilha",
+    "descricao": "Torta de liquidificador com ervilha no recheio.",
+    "ingredientes": [
+      "ervilha",
+      "farinha de trigo",
+      "ovos",
+      "leite",
+      "óleo",
+      "fermento",
+      "queijo",
+      "temperos"
+    ],
+    "modo_preparo": [
+      "Bata os ingredientes da massa",
+      "Coloque metade em uma forma, distribua a ervilha temperada e cubra com o restante",
+      "Asse até dourar"
+    ],
+    "tempo": "50 min",
+    "rendimento": "8 porções",
+    "imagem": "assets/receitas/R011.webp"
+  },
+  {
+    "id": "R012",
+    "nome": "Patê de sardinha",
+    "descricao": "Patê cremoso para servir com pão ou torradas.",
+    "ingredientes": [
+      "sardinha",
+      "maionese",
+      "cebola",
+      "cheiro-verde",
+      "limão"
+    ],
+    "modo_preparo": [
+      "Amasse a sardinha, misture com maionese, cebola e cheiro-verde",
+      "Ajuste com limão e leve à geladeira antes de servir"
+    ],
+    "tempo": "15 min",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R012.webp"
+  },
+  {
+    "id": "R013",
+    "nome": "Patê de atum",
+    "descricao": "Patê de atum simples e cremoso.",
+    "ingredientes": [
+      "atum",
+      "maionese",
+      "cebola",
+      "cheiro-verde",
+      "limão"
+    ],
+    "modo_preparo": [
+      "Misture o atum escorrido com maionese, cebola, cheiro-verde e limão",
+      "Sirva gelado"
+    ],
+    "tempo": "10 min",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R013.webp"
+  },
+  {
+    "id": "R014",
+    "nome": "Salada de batata com maionese",
+    "descricao": "Salada cremosa de batata para acompanhamento.",
+    "ingredientes": [
+      "batata",
+      "maionese",
+      "cenoura",
+      "cebola",
+      "cheiro-verde",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Cozinhe batata e cenoura até ficarem macias",
+      "Espere esfriar e misture com maionese, cebola e cheiro-verde"
+    ],
+    "tempo": "35 min",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R014.webp"
+  },
+  {
+    "id": "R015",
+    "nome": "Brigadeiro",
+    "descricao": "Doce clássico feito com leite condensado e chocolate.",
+    "ingredientes": [
+      "leite condensado",
+      "achocolatado ou chocolate em pó",
+      "manteiga"
+    ],
+    "modo_preparo": [
+      "Leve tudo ao fogo baixo, mexendo até desgrudar do fundo da panela",
+      "Sirva de colher ou deixe esfriar para enrolar"
+    ],
+    "tempo": "20 min",
+    "rendimento": "20 unidades",
+    "imagem": "assets/receitas/R015.webp"
+  },
+  {
+    "id": "R016",
+    "nome": "Mingau de aveia",
+    "descricao": "Mingau cremoso para café da manhã ou lanche.",
+    "ingredientes": [
+      "aveia em flocos",
+      "leite",
+      "açúcar ou canela a gosto"
+    ],
+    "modo_preparo": [
+      "Misture aveia e leite em uma panela",
+      "Cozinhe em fogo baixo, mexendo até engrossar",
+      "Finalize a gosto"
+    ],
+    "tempo": "10 min",
+    "rendimento": "2 porções",
+    "imagem": "assets/receitas/R016.webp"
+  },
+  {
+    "id": "R017",
+    "nome": "Brigadeiro de leite em pó",
+    "descricao": "Brigadeiro branco feito com leite em pó.",
+    "ingredientes": [
+      "leite condensado",
+      "leite em pó",
+      "manteiga"
+    ],
+    "modo_preparo": [
+      "Misture os ingredientes e cozinhe em fogo baixo, mexendo até desgrudar da panela",
+      "Esfrie antes de enrolar"
+    ],
+    "tempo": "20 min",
+    "rendimento": "20 unidades",
+    "imagem": "assets/receitas/R017.webp"
+  },
+  {
+    "id": "R018",
+    "nome": "Strogonoff de frango",
+    "descricao": "Frango cremoso com creme de leite.",
+    "ingredientes": [
+      "filé de peito de frango",
+      "creme de leite",
+      "molho de tomate",
+      "cebola",
+      "alho",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Doure o frango em cubos com cebola e alho",
+      "Acrescente molho de tomate, cozinhe alguns minutos e finalize com creme de leite"
+    ],
+    "tempo": "35 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R018.webp"
+  },
+  {
+    "id": "R019",
+    "nome": "Frango cremoso com requeijão",
+    "descricao": "Frango desfiado cremoso com requeijão.",
+    "ingredientes": [
+      "frango cozido e desfiado",
+      "requeijão",
+      "cebola",
+      "tomate",
+      "temperos"
+    ],
+    "modo_preparo": [
+      "Refogue cebola e tomate, junte o frango e tempere",
+      "Desligue o fogo, misture o requeijão e sirva quente"
+    ],
+    "tempo": "30 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R019.webp"
+  },
+  {
+    "id": "R020",
+    "nome": "Bolo de iogurte",
+    "descricao": "Bolo macio preparado com iogurte.",
+    "ingredientes": [
+      "iogurte",
+      "farinha de trigo",
+      "ovos",
+      "açúcar",
+      "óleo",
+      "fermento"
+    ],
+    "modo_preparo": [
+      "Bata iogurte, ovos, açúcar e óleo",
+      "Misture a farinha e o fermento e asse em forma untada até dourar"
+    ],
+    "tempo": "45 min",
+    "rendimento": "10 porções",
+    "imagem": "assets/receitas/R020.webp"
+  },
+  {
+    "id": "R021",
+    "nome": "Sanduíche quente",
+    "descricao": "Sanduíche de pão, presunto e queijo.",
+    "ingredientes": [
+      "pão de forma",
+      "presunto",
+      "queijo muçarela",
+      "manteiga"
+    ],
+    "modo_preparo": [
+      "Monte os sanduíches com presunto e queijo",
+      "Doure em frigideira, sanduicheira ou forno até o queijo derreter"
+    ],
+    "tempo": "15 min",
+    "rendimento": "2 porções",
+    "imagem": "assets/receitas/R021.webp"
+  },
+  {
+    "id": "R022",
+    "nome": "Mini cachorro-quente",
+    "descricao": "Cachorro-quente simples servido em pão pequeno.",
+    "ingredientes": [
+      "bisnaguinha",
+      "salsicha",
+      "molho de tomate",
+      "cebola",
+      "milho a gosto"
+    ],
+    "modo_preparo": [
+      "Cozinhe as salsichas no molho",
+      "Abra as bisnaguinhas, recheie e sirva com os acompanhamentos desejados"
+    ],
+    "tempo": "25 min",
+    "rendimento": "8 unidades",
+    "imagem": "assets/receitas/R022.webp"
+  },
+  {
+    "id": "R023",
+    "nome": "Pavê de biscoito maisena",
+    "descricao": "Sobremesa em camadas com creme e biscoito.",
+    "ingredientes": [
+      "biscoito maisena",
+      "leite condensado",
+      "leite",
+      "creme de leite",
+      "amido de milho"
+    ],
+    "modo_preparo": [
+      "Prepare um creme com leite, leite condensado e amido",
+      "Monte camadas de creme e biscoito umedecido",
+      "Gele antes de servir"
+    ],
+    "tempo": "40 min + geladeira",
+    "rendimento": "8 porções",
+    "imagem": "assets/receitas/R023.webp"
+  },
+  {
+    "id": "R024",
+    "nome": "Mousse de chocolate",
+    "descricao": "Sobremesa cremosa de chocolate.",
+    "ingredientes": [
+      "chocolate ao leite",
+      "creme de leite",
+      "claras em neve ou chantilly"
+    ],
+    "modo_preparo": [
+      "Derreta o chocolate e misture ao creme de leite",
+      "Incorpore delicadamente as claras ou chantilly e leve para gelar"
+    ],
+    "tempo": "25 min + geladeira",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R024.webp"
+  },
+  {
+    "id": "R025",
+    "nome": "Frango assado com batatas",
+    "descricao": "Frango assado temperado acompanhado de batatas.",
+    "ingredientes": [
+      "frango inteiro ou coxa e sobrecoxa",
+      "batatas",
+      "alho",
+      "limão",
+      "sal",
+      "ervas"
+    ],
+    "modo_preparo": [
+      "Tempere o frango, disponha com as batatas em assadeira e asse até dourar e cozinhar completamente"
+    ],
+    "tempo": "1 h 20 min",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R025.webp"
+  },
+  {
+    "id": "R026",
+    "nome": "Linguiça acebolada",
+    "descricao": "Linguiça toscana dourada com cebola.",
+    "ingredientes": [
+      "linguiça toscana",
+      "cebola",
+      "óleo",
+      "cheiro-verde"
+    ],
+    "modo_preparo": [
+      "Doure a linguiça em rodelas",
+      "Acrescente a cebola fatiada e cozinhe até ficar macia",
+      "Finalize com cheiro-verde"
+    ],
+    "tempo": "30 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R026.webp"
+  },
+  {
+    "id": "R027",
+    "nome": "Bife acebolado",
+    "descricao": "Bife bovino grelhado com cebola.",
+    "ingredientes": [
+      "bife bovino",
+      "cebola",
+      "alho",
+      "sal",
+      "óleo"
+    ],
+    "modo_preparo": [
+      "Tempere e grelhe os bifes",
+      "Na mesma frigideira, doure a cebola e sirva sobre a carne"
+    ],
+    "tempo": "25 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R027.webp"
+  },
+  {
+    "id": "R028",
+    "nome": "Carne de panela",
+    "descricao": "Carne bovina cozida lentamente com temperos.",
+    "ingredientes": [
+      "acém bovino",
+      "cebola",
+      "alho",
+      "tomate",
+      "batata",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Doure a carne, refogue os temperos e cubra com água",
+      "Cozinhe na pressão até ficar macia",
+      "Acrescente batatas no final"
+    ],
+    "tempo": "1 h",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R028.webp"
+  },
+  {
+    "id": "R029",
+    "nome": "Picanha na chapa",
+    "descricao": "Picanha grelhada em fatias.",
+    "ingredientes": [
+      "picanha bovina",
+      "sal grosso"
+    ],
+    "modo_preparo": [
+      "Tempere a picanha com sal, sele em chapa ou frigideira bem quente e finalize até o ponto desejado"
+    ],
+    "tempo": "25 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R029.webp"
+  },
+  {
+    "id": "R030",
+    "nome": "Costela assada",
+    "descricao": "Costela bovina assada lentamente até ficar macia.",
+    "ingredientes": [
+      "costela bovina",
+      "sal",
+      "alho",
+      "cebola"
+    ],
+    "modo_preparo": [
+      "Tempere a costela, cubra bem e asse em temperatura baixa até ficar macia",
+      "Descubra no final para dourar"
+    ],
+    "tempo": "3 h",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R030.webp"
+  },
+  {
+    "id": "R031",
+    "nome": "Bisteca suína grelhada",
+    "descricao": "Bisteca suína temperada e dourada.",
+    "ingredientes": [
+      "bisteca suína",
+      "alho",
+      "limão",
+      "sal",
+      "pimenta"
+    ],
+    "modo_preparo": [
+      "Tempere as bistecas e deixe descansar",
+      "Grelhe em frigideira quente até dourar e cozinhar por dentro"
+    ],
+    "tempo": "30 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R031.webp"
+  },
+  {
+    "id": "R032",
+    "nome": "Pernil assado",
+    "descricao": "Pernil suíno assado com alho e ervas.",
+    "ingredientes": [
+      "pernil suíno",
+      "alho",
+      "cebola",
+      "limão",
+      "sal",
+      "ervas"
+    ],
+    "modo_preparo": [
+      "Tempere o pernil e deixe marinar",
+      "Asse coberto até ficar macio e descubra no final para dourar"
+    ],
+    "tempo": "2 h",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R032.webp"
+  },
+  {
+    "id": "R033",
+    "nome": "Tilápia assada com limão",
+    "descricao": "Filé de tilápia assado com limão e ervas.",
+    "ingredientes": [
+      "filé de tilápia",
+      "limão",
+      "alho",
+      "azeite",
+      "sal",
+      "ervas"
+    ],
+    "modo_preparo": [
+      "Tempere os filés, disponha em assadeira, regue com azeite e asse até o peixe ficar macio e levemente dourado"
+    ],
+    "tempo": "30 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R033.webp"
+  },
+  {
+    "id": "R034",
+    "nome": "Omelete simples",
+    "descricao": "Omelete leve para uma refeição rápida.",
+    "ingredientes": [
+      "ovos",
+      "queijo",
+      "tomate",
+      "cebola",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Bata os ovos, tempere e despeje em frigideira aquecida",
+      "Acrescente o recheio, dobre e cozinhe até firmar"
+    ],
+    "tempo": "15 min",
+    "rendimento": "2 porções",
+    "imagem": "assets/receitas/R034.webp"
+  },
+  {
+    "id": "R035",
+    "nome": "Bolo de banana",
+    "descricao": "Bolo caseiro com banana madura.",
+    "ingredientes": [
+      "banana",
+      "farinha de trigo",
+      "ovos",
+      "açúcar",
+      "óleo",
+      "canela",
+      "fermento"
+    ],
+    "modo_preparo": [
+      "Amasse as bananas, misture com ovos e açúcar",
+      "Junte farinha, óleo e fermento e asse até dourar"
+    ],
+    "tempo": "50 min",
+    "rendimento": "10 porções",
+    "imagem": "assets/receitas/R035.webp"
+  },
+  {
+    "id": "R036",
+    "nome": "Torta de maçã",
+    "descricao": "Torta doce recheada com maçãs e canela.",
+    "ingredientes": [
+      "maçã",
+      "farinha de trigo",
+      "manteiga",
+      "açúcar",
+      "canela"
+    ],
+    "modo_preparo": [
+      "Prepare a massa, forre uma forma e distribua as maçãs fatiadas com açúcar e canela",
+      "Asse até dourar"
+    ],
+    "tempo": "1 h",
+    "rendimento": "8 porções",
+    "imagem": "assets/receitas/R036.webp"
+  },
+  {
+    "id": "R037",
+    "nome": "Bolo de laranja",
+    "descricao": "Bolo aromático preparado com laranja.",
+    "ingredientes": [
+      "laranja",
+      "farinha de trigo",
+      "ovos",
+      "açúcar",
+      "óleo",
+      "fermento"
+    ],
+    "modo_preparo": [
+      "Bata os ingredientes líquidos com a laranja, misture farinha e fermento e asse até dourar"
+    ],
+    "tempo": "50 min",
+    "rendimento": "10 porções",
+    "imagem": "assets/receitas/R037.webp"
+  },
+  {
+    "id": "R038",
+    "nome": "Torta de limão",
+    "descricao": "Sobremesa cremosa com limão e base crocante.",
+    "ingredientes": [
+      "limão",
+      "leite condensado",
+      "creme de leite",
+      "biscoito maisena",
+      "manteiga"
+    ],
+    "modo_preparo": [
+      "Prepare a base com biscoito e manteiga",
+      "Misture o creme com limão e leve para gelar sobre a base"
+    ],
+    "tempo": "30 min + geladeira",
+    "rendimento": "8 porções",
+    "imagem": "assets/receitas/R038.webp"
+  },
+  {
+    "id": "R039",
+    "nome": "Creme de mamão",
+    "descricao": "Sobremesa cremosa à base de mamão.",
+    "ingredientes": [
+      "mamão",
+      "iogurte ou creme de leite",
+      "açúcar a gosto"
+    ],
+    "modo_preparo": [
+      "Bata o mamão com o iogurte ou creme de leite até ficar homogêneo",
+      "Sirva gelado"
+    ],
+    "tempo": "10 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R039.webp"
+  },
+  {
+    "id": "R040",
+    "nome": "Mousse de manga",
+    "descricao": "Mousse leve e cremosa de manga.",
+    "ingredientes": [
+      "manga",
+      "creme de leite",
+      "leite condensado"
+    ],
+    "modo_preparo": [
+      "Bata a polpa da manga com creme de leite e leite condensado",
+      "Leve à geladeira até firmar"
+    ],
+    "tempo": "15 min + geladeira",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R040.webp"
+  },
+  {
+    "id": "R041",
+    "nome": "Salada de melancia",
+    "descricao": "Salada refrescante de melancia com hortelã.",
+    "ingredientes": [
+      "melancia",
+      "hortelã",
+      "limão"
+    ],
+    "modo_preparo": [
+      "Corte a melancia em cubos, misture com hortelã e algumas gotas de limão",
+      "Sirva gelada"
+    ],
+    "tempo": "10 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R041.webp"
+  },
+  {
+    "id": "R042",
+    "nome": "Melão com creme de iogurte",
+    "descricao": "Sobremesa fresca de melão com creme de iogurte.",
+    "ingredientes": [
+      "melão",
+      "iogurte",
+      "mel ou açúcar"
+    ],
+    "modo_preparo": [
+      "Corte o melão em cubos",
+      "Misture o iogurte com mel e sirva sobre a fruta gelada"
+    ],
+    "tempo": "10 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R042.webp"
+  },
+  {
+    "id": "R043",
+    "nome": "Guacamole",
+    "descricao": "Pasta salgada de abacate com tomate e limão.",
+    "ingredientes": [
+      "abacate",
+      "tomate",
+      "cebola",
+      "limão",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Amasse o abacate, misture tomate e cebola picados, tempere com limão e sal e sirva imediatamente"
+    ],
+    "tempo": "15 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R043.webp"
+  },
+  {
+    "id": "R044",
+    "nome": "Mousse de maracujá",
+    "descricao": "Sobremesa cremosa de maracujá.",
+    "ingredientes": [
+      "maracujá",
+      "leite condensado",
+      "creme de leite"
+    ],
+    "modo_preparo": [
+      "Bata a polpa ou suco concentrado com leite condensado e creme de leite",
+      "Leve à geladeira até firmar"
+    ],
+    "tempo": "15 min + geladeira",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R044.webp"
+  },
+  {
+    "id": "R045",
+    "nome": "Torta de pera",
+    "descricao": "Torta doce com peras macias.",
+    "ingredientes": [
+      "pera",
+      "farinha de trigo",
+      "manteiga",
+      "açúcar",
+      "canela"
+    ],
+    "modo_preparo": [
+      "Prepare a massa, distribua as peras fatiadas e polvilhe açúcar e canela",
+      "Asse até dourar"
+    ],
+    "tempo": "55 min",
+    "rendimento": "8 porções",
+    "imagem": "assets/receitas/R045.webp"
+  },
+  {
+    "id": "R046",
+    "nome": "Sobremesa de uva com creme",
+    "descricao": "Uvas frescas servidas com creme doce gelado.",
+    "ingredientes": [
+      "uva sem sementes",
+      "leite condensado",
+      "creme de leite"
+    ],
+    "modo_preparo": [
+      "Misture leite condensado e creme de leite e leve para gelar",
+      "Sirva com as uvas lavadas e secas"
+    ],
+    "tempo": "15 min + geladeira",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R046.webp"
+  },
+  {
+    "id": "R047",
+    "nome": "Pavê de morango",
+    "descricao": "Sobremesa em camadas com morango e creme.",
+    "ingredientes": [
+      "morango",
+      "leite condensado",
+      "creme de leite",
+      "biscoito maisena"
+    ],
+    "modo_preparo": [
+      "Prepare o creme, monte camadas com biscoito e morangos fatiados e leve à geladeira"
+    ],
+    "tempo": "35 min + geladeira",
+    "rendimento": "8 porções",
+    "imagem": "assets/receitas/R047.webp"
+  },
+  {
+    "id": "R048",
+    "nome": "Abacaxi caramelizado",
+    "descricao": "Abacaxi cozido com açúcar até ficar dourado.",
+    "ingredientes": [
+      "abacaxi",
+      "açúcar",
+      "canela opcional"
+    ],
+    "modo_preparo": [
+      "Corte o abacaxi em pedaços e leve ao fogo com açúcar até formar uma calda leve e a fruta ficar macia"
+    ],
+    "tempo": "25 min",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R048.webp"
+  },
+  {
+    "id": "R049",
+    "nome": "Bruschetta de tomate",
+    "descricao": "Pão tostado coberto com tomate temperado.",
+    "ingredientes": [
+      "tomate",
+      "pão",
+      "alho",
+      "azeite",
+      "sal",
+      "ervas"
+    ],
+    "modo_preparo": [
+      "Misture tomate picado com alho, azeite e temperos",
+      "Disponha sobre fatias de pão tostado e sirva"
+    ],
+    "tempo": "20 min",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R049.webp"
+  },
+  {
+    "id": "R050",
+    "nome": "Sopa de cebola",
+    "descricao": "Sopa cremosa e aromática com cebola dourada.",
+    "ingredientes": [
+      "cebola",
+      "manteiga",
+      "farinha de trigo",
+      "caldo",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Doure lentamente a cebola na manteiga",
+      "Acrescente farinha e caldo e cozinhe até encorpar"
+    ],
+    "tempo": "45 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R050.webp"
+  },
+  {
+    "id": "R051",
+    "nome": "Cebola roxa em conserva",
+    "descricao": "Conserva rápida de cebola roxa agridoce.",
+    "ingredientes": [
+      "cebola roxa",
+      "vinagre",
+      "água",
+      "açúcar",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Fatie a cebola",
+      "Aqueça água, vinagre, açúcar e sal, despeje sobre a cebola e deixe esfriar antes de refrigerar"
+    ],
+    "tempo": "15 min + descanso",
+    "rendimento": "1 pote",
+    "imagem": "assets/receitas/R051.webp"
+  },
+  {
+    "id": "R052",
+    "nome": "Batata-doce assada",
+    "descricao": "Batata-doce assada com temperos.",
+    "ingredientes": [
+      "batata-doce",
+      "azeite",
+      "sal",
+      "ervas"
+    ],
+    "modo_preparo": [
+      "Corte a batata em pedaços, tempere com azeite e ervas e asse até ficar macia e dourada"
+    ],
+    "tempo": "40 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R052.webp"
+  },
+  {
+    "id": "R053",
+    "nome": "Bolo de cenoura",
+    "descricao": "Bolo clássico de cenoura, macio e simples.",
+    "ingredientes": [
+      "cenoura",
+      "farinha de trigo",
+      "ovos",
+      "açúcar",
+      "óleo",
+      "fermento"
+    ],
+    "modo_preparo": [
+      "Bata cenoura, ovos e óleo",
+      "Misture açúcar, farinha e fermento e asse até dourar"
+    ],
+    "tempo": "50 min",
+    "rendimento": "10 porções",
+    "imagem": "assets/receitas/R053.webp"
+  },
+  {
+    "id": "R054",
+    "nome": "Salada de beterraba",
+    "descricao": "Beterraba cozida e temperada para acompanhamento.",
+    "ingredientes": [
+      "beterraba",
+      "cebola",
+      "azeite",
+      "vinagre ou limão",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Cozinhe a beterraba, corte em cubos ou fatias e tempere com cebola, azeite e vinagre"
+    ],
+    "tempo": "35 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R054.webp"
+  },
+  {
+    "id": "R055",
+    "nome": "Abobrinha recheada",
+    "descricao": "Abobrinha assada com recheio salgado.",
+    "ingredientes": [
+      "abobrinha",
+      "carne moída ou queijo",
+      "tomate",
+      "cebola",
+      "temperos"
+    ],
+    "modo_preparo": [
+      "Corte as abobrinhas, retire parte do miolo, recheie e asse até ficarem macias"
+    ],
+    "tempo": "45 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R055.webp"
+  },
+  {
+    "id": "R056",
+    "nome": "Chuchu gratinado",
+    "descricao": "Chuchu assado com molho cremoso e queijo.",
+    "ingredientes": [
+      "chuchu",
+      "leite",
+      "queijo",
+      "manteiga",
+      "farinha",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Cozinhe o chuchu, cubra com molho branco e queijo e leve ao forno para gratinar"
+    ],
+    "tempo": "45 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R056.webp"
+  },
+  {
+    "id": "R057",
+    "nome": "Salada de pepino",
+    "descricao": "Salada fresca de pepino temperado.",
+    "ingredientes": [
+      "pepino",
+      "cebola",
+      "limão ou vinagre",
+      "azeite",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Fatie o pepino, misture com cebola e tempere com limão, azeite e sal"
+    ],
+    "tempo": "10 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R057.webp"
+  },
+  {
+    "id": "R058",
+    "nome": "Pimentão recheado",
+    "descricao": "Pimentão assado com recheio de carne e arroz.",
+    "ingredientes": [
+      "pimentão",
+      "carne moída",
+      "arroz cozido",
+      "cebola",
+      "tomate",
+      "queijo opcional"
+    ],
+    "modo_preparo": [
+      "Retire as sementes dos pimentões, recheie com a mistura de carne e arroz e asse até ficarem macios"
+    ],
+    "tempo": "50 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R058.webp"
+  },
+  {
+    "id": "R059",
+    "nome": "Purê de abóbora",
+    "descricao": "Purê cremoso de abóbora cabotiá.",
+    "ingredientes": [
+      "abóbora cabotiá",
+      "manteiga",
+      "leite",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Cozinhe a abóbora até ficar macia, amasse e leve ao fogo com manteiga e leite até ficar cremosa"
+    ],
+    "tempo": "35 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R059.webp"
+  },
+  {
+    "id": "R060",
+    "nome": "Escondidinho de mandioca",
+    "descricao": "Escondidinho com purê de mandioca e carne.",
+    "ingredientes": [
+      "mandioca",
+      "carne moída ou desfiada",
+      "leite",
+      "manteiga",
+      "queijo"
+    ],
+    "modo_preparo": [
+      "Cozinhe e amasse a mandioca, prepare um purê e monte em camadas com a carne",
+      "Cubra com queijo e gratine"
+    ],
+    "tempo": "1 h",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R060.webp"
+  },
+  {
+    "id": "R061",
+    "nome": "Purê de inhame",
+    "descricao": "Purê cremoso e suave de inhame.",
+    "ingredientes": [
+      "inhame",
+      "leite",
+      "manteiga",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Cozinhe o inhame até ficar macio, amasse e misture com leite e manteiga em fogo baixo"
+    ],
+    "tempo": "35 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R061.webp"
+  },
+  {
+    "id": "R062",
+    "nome": "Berinjela à parmegiana",
+    "descricao": "Berinjela assada com molho de tomate e queijo.",
+    "ingredientes": [
+      "berinjela",
+      "molho de tomate",
+      "queijo muçarela",
+      "farinha",
+      "ovos"
+    ],
+    "modo_preparo": [
+      "Empane ou grelhe as fatias de berinjela, monte com molho e queijo e leve ao forno para gratinar"
+    ],
+    "tempo": "50 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R062.webp"
+  },
+  {
+    "id": "R063",
+    "nome": "Repolho refogado",
+    "descricao": "Repolho fatiado e refogado com alho.",
+    "ingredientes": [
+      "repolho",
+      "alho",
+      "cebola",
+      "óleo",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Refogue alho e cebola, acrescente o repolho fatiado e cozinhe rapidamente até murchar sem perder textura"
+    ],
+    "tempo": "20 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R063.webp"
+  },
+  {
+    "id": "R064",
+    "nome": "Pão de alho",
+    "descricao": "Pão assado com creme de alho.",
+    "ingredientes": [
+      "alho",
+      "pão",
+      "manteiga",
+      "cheiro-verde",
+      "queijo opcional"
+    ],
+    "modo_preparo": [
+      "Misture alho amassado com manteiga e cheiro-verde, passe no pão e asse até dourar"
+    ],
+    "tempo": "20 min",
+    "rendimento": "6 porções",
+    "imagem": "assets/receitas/R064.webp"
+  },
+  {
+    "id": "R065",
+    "nome": "Salada verde",
+    "descricao": "Salada simples de folhas frescas.",
+    "ingredientes": [
+      "alface",
+      "rúcula",
+      "tomate",
+      "pepino",
+      "azeite",
+      "limão",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Lave e seque as folhas, misture com tomate e pepino e tempere apenas na hora de servir"
+    ],
+    "tempo": "15 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R065.webp"
+  },
+  {
+    "id": "R066",
+    "nome": "Couve refogada",
+    "descricao": "Couve finamente fatiada e refogada com alho.",
+    "ingredientes": [
+      "couve",
+      "alho",
+      "azeite ou óleo",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Aqueça o azeite, doure rapidamente o alho e junte a couve",
+      "Refogue por poucos minutos"
+    ],
+    "tempo": "10 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R066.webp"
+  },
+  {
+    "id": "R067",
+    "nome": "Brócolis gratinado",
+    "descricao": "Brócolis ao forno com molho branco e queijo.",
+    "ingredientes": [
+      "brócolis",
+      "leite",
+      "queijo",
+      "manteiga",
+      "farinha",
+      "sal"
+    ],
+    "modo_preparo": [
+      "Cozinhe o brócolis rapidamente, cubra com molho branco e queijo e leve ao forno até gratinar"
+    ],
+    "tempo": "40 min",
+    "rendimento": "4 porções",
+    "imagem": "assets/receitas/R067.webp"
+  }
+]
