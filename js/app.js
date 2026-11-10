@@ -1220,7 +1220,7 @@ async function iniciarMapaExploracao() {
 
     const resposta =
       await fetch(
-        "./assets/mapa/supermercado-Anhanvera.svg"
+        "./assets/mapa/supermercado-anhanvera.svg"
       );
 
 
